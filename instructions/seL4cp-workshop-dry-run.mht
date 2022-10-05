@@ -1,0 +1,3602 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://web.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/getting_started/index.html
+Subject: Part 0 - Setting up your environment - seL4CP Summit Workshop (dry-run)
+Date: Wed, 5 Oct 2022 21:54:53 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----"
+
+
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/html
+Content-ID: <frame-EEBB46E83D37C3AA1D3FFB28B6EF4031@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/getting_started/index.html
+
+<!DOCTYPE html><html lang=3D"en" class=3D"js sidebar-visible rust"><head><m=
+eta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><lin=
+k rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-3c2e8972-9d5b-470d-8=
+686-367980c1b657@mhtml.blink" />
+
+
+
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://web.archive.org/=
+_static/css/banner-styles.css?v=3DfantwOh2">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://web.archive.org/=
+_static/css/iconochive.css?v=3DqtvMKcIJ">
+<!-- End Wayback Rewrite JS Include -->
+
+        <!-- Book generated using mdBook -->
+       =20
+        <title>Part 0 - Setting up your environment - seL4CP Summit Worksho=
+p (dry-run)</title>
+
+
+        <!-- Custom HTML head -->
+       =20
+       =20
+        <meta name=3D"description" content=3D"">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <meta name=3D"theme-color" content=3D"rgba(0, 0, 0, 0)">
+
+        <link rel=3D"icon" href=3D"https://web.archive.org/web/202209300359=
+09im_/https://summit.ivanvelickovic.com/favicon.svg">
+        <link rel=3D"shortcut icon" href=3D"https://web.archive.org/web/202=
+20930035909im_/https://summit.ivanvelickovic.com/favicon.png">
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/css/variables.css">
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/css/general.css">
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/css/chrome.css">
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/css/print.css" media=3D"print=
+">
+
+        <!-- Fonts -->
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/FontAwesome/css/font-awesome.=
+css">
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel=3D"stylesheet" href=3D"https://web.archive.org/web/202209=
+30035909cs_/https://summit.ivanvelickovic.com/highlight.css">
+       =20
+       =20
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<div style=3D"position: static !important;"></div>
+<div id=3D"wm-ipp-base" lang=3D"en" style=3D"display: block; direction: ltr=
+; height: 1px;">
+<template shadowmode=3D"closed"><div id=3D"wm-ipp" style=3D"position:fixed;=
+left:0;top:0;right:0;">
+<div id=3D"donato" style=3D"position:relative;width:100%;">
+  <div id=3D"donato-base">
+    <iframe id=3D"donato-if" src=3D"cid:frame-89A7CC11B395FD56E198580F7C083=
+C52@mhtml.blink" scrolling=3D"no" frameborder=3D"0" style=3D"width:100%; he=
+ight:100%">
+    </iframe>
+  </div>
+</div><div id=3D"wm-ipp-inside" style=3D"display: none;">
+  <div id=3D"wm-toolbar" style=3D"position:relative;display:flex;flex-flow:=
+row nowrap;justify-content:space-between;">
+    <div id=3D"wm-logo" style=3D"/*width:110px;*/padding-top:12px;">
+      <a href=3D"https://web.archive.org/web/" title=3D"Wayback Machine hom=
+e page"><img src=3D"https://web.archive.org/_static/images/toolbar/wayback-=
+toolbar-logo-200.png" alt=3D"Wayback Machine" style=3D"width:100px" border=
+=3D"0"></a>
+    </div>
+    <div class=3D"c" style=3D"display:flex;flex-flow:column nowrap;justify-=
+content:space-between;flex:1;">
+      <form class=3D"u" style=3D"display:flex;flex-direction:row;flex-wrap:=
+nowrap;" target=3D"_top" method=3D"get" action=3D"https://web.archive.org/w=
+eb/submit" name=3D"wmtb" id=3D"wmtb"><input type=3D"text" name=3D"url" id=
+=3D"wmtbURL" value=3D"https://summit.ivanvelickovic.com/getting_started/ind=
+ex.html" style=3D"flex:1;" autocomplete=3D"off"><input type=3D"submit" valu=
+e=3D"Go">
+      </form>
+      <div style=3D"display:flex;flex-flow:row nowrap;align-items:flex-end;=
+">
+		<div class=3D"s" id=3D"wm-nav-captures" style=3D"flex:1;"><a class=3D"t" =
+href=3D"https://web.archive.org/web/*/https://summit.ivanvelickovic.com/get=
+ting_started/index.html" title=3D"See a list of every capture for this URL"=
+>1 capture</a><div class=3D"r" title=3D"Timespan for captures of this URL">=
+30 Sep 2022</div></div>
+	<div class=3D"k">
+	  <a href=3D"https://web.archive.org/web/20220930035909/https://summit.iva=
+nvelickovic.com/getting_started/index.html" id=3D"wm-graph-anchor">
+	    <div id=3D"wm-ipp-sparkline" title=3D"Explore captures for this URL" s=
+tyle=3D"position: relative">
+	      <canvas id=3D"wm-sparkline-canvas" width=3D"675" height=3D"27" borde=
+r=3D"0"></canvas>
+	    <div class=3D"yt" style=3D"display: none; width: 25px; height: 27px;">=
+</div><div class=3D"mt" style=3D"display: none; width: 2px; height: 27px;">=
+</div></div>
+	  </a>
+	</div>
+      </div>
+    </div>
+    <div class=3D"n">
+      <table>
+	<tbody>
+	  <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+	  <tr class=3D"m">
+	    <td class=3D"b" nowrap=3D"nowrap">Aug</td>
+	    <td class=3D"c" id=3D"displayMonthEl" title=3D"You are here: 03:59:09 =
+Sep 30, 2022">SEP</td>
+	    <td class=3D"f" nowrap=3D"nowrap">Oct</td>
+	  </tr>
+	  <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+	  <tr class=3D"d">
+	    <td class=3D"b" nowrap=3D"nowrap"><img src=3D"https://web.archive.org/=
+_static/images/toolbar/wm_tb_prv_off.png" alt=3D"Previous capture" width=3D=
+"14" height=3D"16" border=3D"0"></td>
+	    <td class=3D"c" id=3D"displayDayEl" style=3D"width:34px;font-size:22px=
+;white-space:nowrap;" title=3D"You are here: 03:59:09 Sep 30, 2022">30</td>
+	    <td class=3D"f" nowrap=3D"nowrap"><img src=3D"https://web.archive.org/=
+_static/images/toolbar/wm_tb_nxt_off.png" alt=3D"Next capture" width=3D"14"=
+ height=3D"16" border=3D"0"></td>
+	  </tr>
+	  <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+	  <tr class=3D"y">
+	    <td class=3D"b" nowrap=3D"nowrap">2021</td>
+	    <td class=3D"c" id=3D"displayYearEl" title=3D"You are here: 03:59:09 S=
+ep 30, 2022">2022</td>
+	    <td class=3D"f" nowrap=3D"nowrap">2023</td>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+    <div class=3D"r" style=3D"display:flex;flex-flow:column nowrap;align-it=
+ems:flex-end;justify-content:space-between;">
+      <div id=3D"wm-btns" style=3D"text-align:right;height:23px;">
+        	<span class=3D"xxs">
+          <div id=3D"wm-save-snapshot-success">success</div>
+          <div id=3D"wm-save-snapshot-fail">fail</div>
+          <a id=3D"wm-save-snapshot-open" href=3D"https://web.archive.org/w=
+eb/20220930035909/https://summit.ivanvelickovic.com/getting_started/index.h=
+tml#" title=3D"Share via My Web Archive" style=3D"display: none;">
+            <span class=3D"iconochive-web"></span>
+          </a>
+          <a href=3D"https://archive.org/account/login.php" title=3D"Sign I=
+n" id=3D"wm-sign-in" style=3D"display: inline-block;">
+            <span class=3D"iconochive-person"></span>
+          </a>
+          <span id=3D"wm-save-snapshot-in-progress" class=3D"iconochive-web=
+" style=3D"display: none;"></span>
+	</span>
+        	<a class=3D"xxs" href=3D"http://faq.web.archive.org/" title=3D"Get=
+ some help using the Wayback Machine" style=3D"top:-6px;"><span class=3D"ic=
+onochive-question" style=3D"color:rgb(87,186,244);font-size:160%;"></span><=
+/a>
+	<a id=3D"wm-tb-close" href=3D"https://web.archive.org/web/20220930035909/h=
+ttps://summit.ivanvelickovic.com/getting_started/index.html#close" style=3D=
+"top:-2px;" title=3D"Close the toolbar"><span class=3D"iconochive-remove-ci=
+rcle" style=3D"color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id=3D"wm-share" class=3D"xxs">
+        <a href=3D"https://web.archive.org/web/20220930035909/http://web.ar=
+chive.org/screenshot/https://summit.ivanvelickovic.com/getting_started/inde=
+x.html" id=3D"wm-screenshot" title=3D"screenshot" style=3D"visibility: hidd=
+en;">
+          <span class=3D"wm-icon-screen-shot"></span>
+        </a>
+        <a href=3D"https://web.archive.org/web/20220930035909/https://summi=
+t.ivanvelickovic.com/getting_started/index.html#" id=3D"wm-video" title=3D"=
+video">
+          <span class=3D"iconochive-movies"></span>
+        </a>
+	<a id=3D"wm-share-facebook" href=3D"https://web.archive.org/web/2022093003=
+5909/https://summit.ivanvelickovic.com/getting_started/index.html#" data-ur=
+l=3D"https://web.archive.org/web/20220930035909/https://summit.ivanvelickov=
+ic.com/getting_started/index.html" title=3D"Share on Facebook" style=3D"mar=
+gin-right:5px;" target=3D"_blank"><span class=3D"iconochive-facebook" style=
+=3D"color:#3b5998;font-size:160%;"></span></a>
+	<a id=3D"wm-share-twitter" href=3D"https://web.archive.org/web/20220930035=
+909/https://summit.ivanvelickovic.com/getting_started/index.html#" data-url=
+=3D"https://web.archive.org/web/20220930035909/https://summit.ivanvelickovi=
+c.com/getting_started/index.html" title=3D"Share on Twitter" style=3D"margi=
+n-right:5px;" target=3D"_blank"><span class=3D"iconochive-twitter" style=3D=
+"color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style=3D"padding-right:2px;text-align:right;white-space:nowrap;"=
+>
+	<a id=3D"wm-expand" class=3D"wm-btn wm-closed" href=3D"https://web.archive=
+.org/web/20220930035909/https://summit.ivanvelickovic.com/getting_started/i=
+ndex.html#expand"><span id=3D"wm-expand-icon" class=3D"iconochive-down-soli=
+d"></span> <span class=3D"xxs" style=3D"font-size:80%;">About this capture<=
+/span></a>
+      </div>
+    </div>
+  </div>
+    <div id=3D"wm-capinfo" style=3D"border-top:1px solid #777;display:none;=
+ overflow: hidden">
+                    <div id=3D"wm-capinfo-collected-by">
+    <div style=3D"background-color:#666;color:#fff;font-weight:bold;text-al=
+ign:center">COLLECTED BY</div>
+    <div style=3D"padding:3px;position:relative" id=3D"wm-collected-by-cont=
+ent">
+      <div style=3D"display:inline-block;vertical-align:top;width:49%;">
+			<span class=3D"c-logo" style=3D"background-image:url(https://archive.org=
+/services/img/save-page-now)"></span>
+		<div>Collection: <a style=3D"color:#33f;" href=3D"https://archive.org/det=
+ails/save-page-now" target=3D"_new"><span class=3D"wm-title">Save Page Now<=
+/span></a></div>
+	      </div>
+    </div>
+    </div>
+    <div id=3D"wm-capinfo-timestamps">
+    <div style=3D"background-color:#666;color:#fff;font-weight:bold;text-al=
+ign:center" title=3D"Timestamps for the elements of this page">TIMESTAMPS</=
+div>
+    <div>
+      <div id=3D"wm-capresources" style=3D"margin:0 5px 5px 5px;max-height:=
+250px;overflow-y:scroll !important"></div>
+      <div id=3D"wm-capresources-loading" style=3D"text-align:left;margin:0=
+ 20px 5px 5px;display:none"><img src=3D"https://web.archive.org/_static/ima=
+ges/loading.gif" alt=3D"loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel=3D"stylesheet" type=3D"text/css" href=3D"http=
+s://web.archive.org/_static/css/banner-styles.css?v=3DfantwOh2"><link rel=
+=3D"stylesheet" type=3D"text/css" href=3D"https://web.archive.org/_static/c=
+ss/iconochive.css?v=3DqtvMKcIJ"><div class=3D"wb-autocomplete-suggestions "=
+></div></template></div><div id=3D"wm-ipp-print">The Wayback Machine - http=
+s://web.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/ge=
+tting_started/index.html</div>
+
+<!-- END WAYBACK TOOLBAR INSERT -->
+        <!-- Provide site root to javascript -->
+       =20
+
+        <!-- Work around some values being stored in localStorage wrapped i=
+n quotes -->
+       =20
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+       =20
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+       =20
+
+        <nav id=3D"sidebar" class=3D"sidebar" aria-label=3D"Table of conten=
+ts" aria-hidden=3D"false">
+            <div class=3D"sidebar-scrollbox">
+                <ol class=3D"chapter"><li class=3D"chapter-item expanded ">=
+<a href=3D"https://web.archive.org/web/20220930035909/https://summit.ivanve=
+lickovic.com/getting_started/index.html" class=3D"active" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">1.</strong> Part 0 - Setting up your environment=
+</a></li><li class=3D"chapter-item expanded "><a href=3D"https://web.archiv=
+e.org/web/20220930035909/https://summit.ivanvelickovic.com/welcome.html" ta=
+bindex=3D"0"><strong aria-hidden=3D"true">2.</strong> Welcome</a></li><li c=
+lass=3D"chapter-item expanded "><a href=3D"https://web.archive.org/web/2022=
+0930035909/https://summit.ivanvelickovic.com/part1.html" tabindex=3D"0"><st=
+rong aria-hidden=3D"true">3.</strong> Part 1 - Serial server</a></li><li cl=
+ass=3D"chapter-item expanded "><a href=3D"https://web.archive.org/web/20220=
+930035909/https://summit.ivanvelickovic.com/part2.html" tabindex=3D"0"><str=
+ong aria-hidden=3D"true">4.</strong> Part 2 - Client</a></li><li class=3D"c=
+hapter-item expanded "><a href=3D"https://web.archive.org/web/2022093003590=
+9/https://summit.ivanvelickovic.com/part3.html" tabindex=3D"0"><strong aria=
+-hidden=3D"true">5.</strong> Part 3 - Wordle server</a></li><li class=3D"ch=
+apter-item expanded "><a href=3D"https://web.archive.org/web/20220930035909=
+/https://summit.ivanvelickovic.com/part4.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">6.</strong> Part 4 - Dynamicism</a></li></ol>
+            </div>
+            <div id=3D"sidebar-resize-handle" class=3D"sidebar-resize-handl=
+e"></div>
+        </nav>
+
+        <div id=3D"page-wrapper" class=3D"page-wrapper">
+
+            <div class=3D"page">
+                                <div id=3D"menu-bar-hover-placeholder"></di=
+v>
+                <div id=3D"menu-bar" class=3D"menu-bar" style=3D"top: 0px;"=
+>
+                    <div class=3D"left-buttons">
+                        <button id=3D"sidebar-toggle" class=3D"icon-button"=
+ type=3D"button" title=3D"Toggle Table of Contents" aria-label=3D"Toggle Ta=
+ble of Contents" aria-controls=3D"sidebar" aria-expanded=3D"true">
+                            <i class=3D"fa fa-bars"></i>
+                        </button>
+                        <button id=3D"theme-toggle" class=3D"icon-button" t=
+ype=3D"button" title=3D"Change theme" aria-label=3D"Change theme" aria-hasp=
+opup=3D"true" aria-expanded=3D"false" aria-controls=3D"theme-list">
+                            <i class=3D"fa fa-paint-brush"></i>
+                        </button>
+                        <ul id=3D"theme-list" class=3D"theme-popup" aria-la=
+bel=3D"Themes" role=3D"menu">
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"light">Light</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"rust">Rust (default)</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"sel4cp_theme">sel4cp</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"navy">Navy</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"ayu">Ayu</button></li>
+                        </ul>
+                        <button id=3D"search-toggle" class=3D"icon-button" =
+type=3D"button" title=3D"Search. (Shortkey: s)" aria-label=3D"Toggle Search=
+bar" aria-expanded=3D"false" aria-keyshortcuts=3D"S" aria-controls=3D"searc=
+hbar">
+                            <i class=3D"fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class=3D"menu-title">seL4CP Summit Workshop (dry-ru=
+n)</h1>
+
+                    <div class=3D"right-buttons">
+                        <a href=3D"https://web.archive.org/web/202209300359=
+09/https://summit.ivanvelickovic.com/print.html" title=3D"Print this book" =
+aria-label=3D"Print this book">
+                            <i id=3D"print-button" class=3D"fa fa-print"></=
+i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id=3D"search-wrapper" class=3D"hidden">
+                    <form id=3D"searchbar-outer" class=3D"searchbar-outer">
+                        <input type=3D"search" id=3D"searchbar" name=3D"sea=
+rchbar" placeholder=3D"Search this book ..." aria-controls=3D"searchresults=
+-outer" aria-describedby=3D"searchresults-header">
+                    </form>
+                    <div id=3D"searchresults-outer" class=3D"searchresults-=
+outer hidden">
+                        <div id=3D"searchresults-header" class=3D"searchres=
+ults-header"></div>
+                        <ul id=3D"searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sideba=
+r toggle button are added to the DOM -->
+               =20
+
+                <div id=3D"content" class=3D"content">
+                    <main>
+                        <h1 id=3D"setting-up-your-environment"><a class=3D"=
+header" href=3D"https://web.archive.org/web/20220930035909/https://summit.i=
+vanvelickovic.com/getting_started/index.html#setting-up-your-environment">S=
+etting up your environment</a></h1>
+<p>This page outlines how to set up your environment for completing the wor=
+kshop and how to test that you've done so correctly. If you have any issues=
+ feel free to message me on Mattermost or email me at i.velickovic@unsw.edu=
+.au!</p>
+<h2 id=3D"acquiring-the-dependencies"><a class=3D"header" href=3D"https://w=
+eb.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/getting=
+_started/index.html#acquiring-the-dependencies">Acquiring the dependencies<=
+/a></h2>
+<p>Here are two options for building and running the workshop material:</p>
+<ol>
+<li>The seL4 Docker container. If you already have the <a href=3D"https://w=
+eb.archive.org/web/20220930035909/https://docs.sel4.systems/projects/docker=
+files/" target=3D"_blank">Docker container used for seL4 development</a> se=
+t up, that is sufficient for this workshop.</li>
+<li>Install dependencies and use the SDK natively, however this option is o=
+nly available on Linux x86_64.</li>
+</ol>
+<!-- 3. The seL4CP-specific Docker container has everything you will need a=
+s well and mounts onto your file system. It should run on any system that D=
+ocker runs on. -->
+<h3 id=3D"option-1---sel4-docker-container"><a class=3D"header" href=3D"htt=
+ps://web.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/g=
+etting_started/index.html#option-1---sel4-docker-container">Option 1 - seL4=
+ Docker container</a></h3>
+<p>Follow the <a href=3D"https://web.archive.org/web/20220930035909/https:/=
+/docs.sel4.systems/projects/dockerfiles/" target=3D"_blank">instructions on=
+ the seL4 website</a>.</p>
+<h3 id=3D"option-2---native-linux-x86_64"><a class=3D"header" href=3D"https=
+://web.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/get=
+ting_started/index.html#option-2---native-linux-x86_64">Option 2 - Native (=
+Linux x86_64)</a></h3>
+<p>You'll need the following dependencies:</p>
+<ul>
+<li>make</li>
+<li>AAarch64 cross compiler (specifically, the <code class=3D"hljs">aarch64=
+-linux-gnu-</code> toolchain)</li>
+<li>QEMU for AAarch64 emulation</li>
+</ul>
+<p>If you use <code class=3D"hljs">apt</code> you can install these with th=
+e following command:</p>
+<pre><div class=3D"buttons"><button class=3D"fa fa-copy clip-button" title=
+=3D"Copy to clipboard" aria-label=3D"Copy to clipboard"><i class=3D"tooltip=
+text"></i></button></div><code class=3D"language-sh hljs bash">sudo apt-get=
+ update &amp;&amp; sudo apt-get install make gcc-aarch64-linux-gnu qemu-sys=
+tem-arm
+</code></pre>
+<!--
+## Hardware
+
+I expect the majority of people to be doing the workshop via a simulator. H=
+owever, everyone is welcome to bring their own machine to do the workshop o=
+n. If you have done so, I have instructions for the following boards:
+- Raspberry Pi Model 3B+
+- Raspberry Pi Model 4
+-->
+<h2 id=3D"acquiring-the-sdk"><a class=3D"header" href=3D"https://web.archiv=
+e.org/web/20220930035909/https://summit.ivanvelickovic.com/getting_started/=
+index.html#acquiring-the-sdk">Acquiring the SDK</a></h2>
+<p>Regardless of how you set up your machine, you'll need to acquire the sp=
+ecific SDK for the workshop from <a href=3D"https://web.archive.org/web/202=
+20930035909/https://summit.ivanvelickovic.com/downloads/sdk.tar.gz">here</a=
+>. Alternatively, run the following commands:</p>
+<pre><div class=3D"buttons"><button class=3D"fa fa-copy clip-button" title=
+=3D"Copy to clipboard" aria-label=3D"Copy to clipboard"><i class=3D"tooltip=
+text"></i></button></div><code class=3D"language-sh hljs bash">mkdir sel4cp=
+_workshop
+<span class=3D"hljs-built_in">cd</span> sel4cp_workshop
+wget summit.ivanvelickovic.com/downloads/sdk.tar.gz
+tar xvf sdk.tar.gz
+</code></pre>
+<h2 id=3D"testing-your-environment"><a class=3D"header" href=3D"https://web=
+.archive.org/web/20220930035909/https://summit.ivanvelickovic.com/getting_s=
+tarted/index.html#testing-your-environment">Testing your environment</a></h=
+2>
+<p>After setting up everything, you should attempt to run a simple "hello w=
+orld" system to make sure that your environment is working correctly. Note =
+that if you're using the Docker container, you'll want to do the following =
+steps inside the container.</p>
+<p>Build the "hello world" image:</p>
+<pre><div class=3D"buttons"><button class=3D"fa fa-copy clip-button" title=
+=3D"Copy to clipboard" aria-label=3D"Copy to clipboard"><i class=3D"tooltip=
+text"></i></button></div><code class=3D"language-sh hljs bash"><span class=
+=3D"hljs-comment"># Inside the "sel4cp_workshop" directory</span>
+mkdir hello_world_build
+make -C sel4cp_workshop_sdk/board/qemu_arm_virt/example/hello/ BUILD_DIR=3D=
+$(<span class=3D"hljs-built_in">pwd</span>)/hello_world_build SEL4CP_SDK=3D=
+$(<span class=3D"hljs-built_in">pwd</span>)/sel4cp_workshop_sdk SEL4CP_BOAR=
+D=3Dqemu_arm_virt SEL4CP_CONFIG=3Ddebug
+</code></pre>
+<p>Run the built image:</p>
+<pre><div class=3D"buttons"><button class=3D"fa fa-copy clip-button" title=
+=3D"Copy to clipboard" aria-label=3D"Copy to clipboard"><i class=3D"tooltip=
+text"></i></button></div><code class=3D"language-sh hljs bash">qemu-system-=
+aarch64 -machine virt -cpu cortex-a53 -serial mon:stdio -device loader,file=
+=3Dhello_world_build/loader.img,addr=3D0x70000000,cpu-num=3D0 -m size=3D1G =
+-display none
+</code></pre>
+<p>After running the hello world example, you should get the following outp=
+ut:</p>
+<pre><div class=3D"buttons"><button class=3D"fa fa-copy clip-button" title=
+=3D"Copy to clipboard" aria-label=3D"Copy to clipboard"><i class=3D"tooltip=
+text"></i></button></div><code class=3D"hljs">LDR|INFO: altloader for seL4 =
+starting
+LDR|INFO: Flags:                0x0000000000000000
+LDR|INFO: Kernel:      entry:   0xffffff8040000000
+LDR|INFO: Root server: physmem: 0x000000004024d000 -- 0x0000000040254000
+LDR|INFO:              virtmem: 0x000000008a000000 -- 0x000000008a007000
+LDR|INFO:              entry  : 0x000000008a000000
+LDR|INFO: region: 0x00000000   addr: 0x0000000040000000   size: 0x000000000=
+0249000   offset: 0x0000000000000000   type: 0x0000000000000001
+LDR|INFO: region: 0x00000001   addr: 0x000000004024d000   size: 0x000000000=
+00060d0   offset: 0x0000000000249000   type: 0x0000000000000001
+LDR|INFO: region: 0x00000002   addr: 0x0000000040249000   size: 0x000000000=
+0000960   offset: 0x000000000024f0d0   type: 0x0000000000000001
+LDR|INFO: region: 0x00000003   addr: 0x000000004024a000   size: 0x000000000=
+0000318   offset: 0x000000000024fa30   type: 0x0000000000000001
+LDR|INFO: region: 0x00000004   addr: 0x000000004024b000   size: 0x000000000=
+0001020   offset: 0x000000000024fd48   type: 0x0000000000000001
+LDR|INFO: copying region 0x00000000
+LDR|INFO: copying region 0x00000001
+LDR|INFO: copying region 0x00000002
+LDR|INFO: copying region 0x00000003
+LDR|INFO: copying region 0x00000004
+LDR|INFO: Setting all interrupts to Group 1
+LDR|INFO: GICv2 ITLinesNumber: 0x00000000
+LDR|INFO: CurrentEL=3DEL1
+LDR|INFO: enabling MMU
+LDR|INFO: jumping to kernel
+Bootstrapping kernel
+Warning: Could not infer GIC interrupt target ID, assuming 0.
+reserved virt address space regions: 3
+  [ffffff8040000000..ffffff8040249000]
+  [ffffff8040249000..ffffff804024d000]
+  [ffffff804024d000..ffffff8040254000]
+available phys memory regions: 1
+  [40000000..80000000]
+Booting all finished, dropped to user space
+MON|INFO: seL4 Core Platform Bootstrap
+MON|INFO: bootinfo untyped list matches expected list
+MON|INFO: Number of bootstrap invocations: 0x00000009
+MON|INFO: Number of system invocations:    0x00000022
+MON|INFO: completed bootstrap invocations
+MON|INFO: completed system invocations
+hello, world
+</code></pre>
+<p>To exit QEMU, press <code class=3D"hljs">CTRL + a</code> then <code clas=
+s=3D"hljs">x</code>.</p>
+<p>If you manage to get the final "hello, world", you have set up your mach=
+ine correctly and can move on to the exercises, once they're released. That=
+'s all you need to know for now, the details of building and running a syst=
+em will be explained in the workshop.</p>
+<!-- TODO: Firstly we have the seL4CP loader starting. It's main purpose is=
+ to put all the data that has been packed into the bootable image at the ri=
+ght address and region of memory, and then to initialise the hardware to st=
+art seL4. We can see after the `LDR|INFO: jumping to kernel` message that t=
+he kernel starts and sets itself up, and then drops to the initial user spa=
+ce task. In seL4CP, the initial task is called the "monitor", it is respons=
+ible for setting up the seL4 capabilities, performing all the system calls =
+necessary to set up the protection domains, interrupts, channels, memory re=
+gions, and so on. Once the monitor is finished, we finally get to the `init=
+` function of our PD which prints out "hello world". -->
+
+                    </main>
+
+                    <nav class=3D"nav-wrapper" aria-label=3D"Page navigatio=
+n">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel=3D"next" href=3D"https://web.archive.org=
+/web/20220930035909/https://summit.ivanvelickovic.com/welcome.html" class=
+=3D"mobile-nav-chapters next" title=3D"Next chapter" aria-label=3D"Next cha=
+pter" aria-keyshortcuts=3D"Right">
+                                <i class=3D"fa fa-angle-right"></i>
+                            </a>
+
+                        <div style=3D"clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class=3D"nav-wide-wrapper" aria-label=3D"Page navigation">
+
+                    <a rel=3D"next" href=3D"https://web.archive.org/web/202=
+20930035909/https://summit.ivanvelickovic.com/welcome.html" class=3D"nav-ch=
+apters next" title=3D"Next chapter" aria-label=3D"Next chapter" aria-keysho=
+rtcuts=3D"Right">
+                        <i class=3D"fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+       =20
+
+
+       =20
+       =20
+       =20
+
+       =20
+       =20
+       =20
+
+        <!-- Custom JS scripts -->
+
+
+   =20
+
+<!--
+     FILE ARCHIVED ON 03:59:09 Sep 30, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:50:46 Oct 05, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 5667.101
+  exclusion.robots: 0.159
+  exclusion.robots.policy: 0.151
+  cdx.remote: 0.068
+  esindex: 0.01
+  LoadShardBlock: 1117.998 (3)
+  PetaboxLoader3.datanode: 362.306 (4)
+  CDXLines.iter: 12.508 (3)
+  load_resource: 149.81
+--></body></html>
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-3c2e8972-9d5b-470d-8686-367980c1b657@mhtml.blink
+
+@charset "utf-8";
+
+body { margin-top: 0px !important; padding-top: 0px !important; }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/_static/css/banner-styles.css?v=fantwOh2
+
+@charset "utf-8";
+
+@import url("record.css");
+
+#wm-ipp-base { height: 65px; padding: 0px; margin: 0px; border: none; backg=
+round: none transparent; }
+
+#wm-ipp { z-index: 2147483647; }
+
+#wm-ipp, #wm-ipp * { font-family: "Lucida Grande", Helvetica, Arial, sans-s=
+erif; font-size: 12px; line-height: 1.2; letter-spacing: 0px; width: auto; =
+height: auto; max-width: none; max-height: none; min-height: 0px; outline: =
+none; float: none; text-align: left; border: none; color: rgb(0, 0, 0); tex=
+t-indent: 0px; position: initial; background: none; min-width: 0px !importa=
+nt; }
+
+#wm-ipp div, #wm-ipp canvas { display: block; }
+
+#wm-ipp div, #wm-ipp tr, #wm-ipp td, #wm-ipp a, #wm-ipp form { padding: 0px=
+; margin: 0px; border: none; border-radius: 0px; background-color: transpar=
+ent; background-image: none; height: auto; }
+
+#wm-ipp table { border: none; border-collapse: collapse; margin: 0px; paddi=
+ng: 0px; width: auto; font-size: inherit; }
+
+#wm-ipp form input { height: auto; display: inline; margin: 0px; color: rgb=
+(0, 0, 0); background: none rgb(255, 255, 255); border: 1px solid rgb(102, =
+102, 102); padding: 1px !important; }
+
+#wm-ipp form input[type=3D"submit"] { padding: 0px 8px !important; margin: =
+1px 0px 1px 5px !important; width: auto !important; border: 1px solid rgb(0=
+, 0, 0) !important; background: rgb(255, 255, 255) !important; color: rgb(0=
+, 0, 0) !important; }
+
+#wm-ipp a { display: inline; }
+
+#wm-ipp a:hover { text-decoration: underline; }
+
+#wm-ipp a.wm-btn:hover { text-decoration: none; color: rgb(255, 255, 0) !im=
+portant; }
+
+#wm-ipp a.wm-btn:hover span { color: rgb(255, 255, 0) !important; }
+
+#wm-ipp #wm-ipp-inside { margin: 0px 6px; border-right: 5px solid rgb(0, 0,=
+ 0); border-bottom: 5px solid rgb(0, 0, 0); border-left: 5px solid rgb(0, 0=
+, 0); border-image: initial; border-top: none; background-color: rgba(255, =
+255, 255, 0.9); box-shadow: rgb(51, 51, 51) 1px 1px 4px; border-radius: 0px=
+ 0px 8px 8px; }
+
+#wm-ipp #wm-logo { padding: 0px 10px; vertical-align: middle; min-width: 10=
+0px; flex: 0 0 100px; }
+
+#wm-ipp .c { padding-left: 4px; }
+
+#wm-ipp .c .u { margin-top: 4px !important; }
+
+#wm-ipp .n { vertical-align: bottom; padding: 0px 0px 0px 5px !important; }
+
+#wm-ipp .n a { text-decoration: none; color: rgb(51, 51, 255); font-weight:=
+ bold; }
+
+#wm-ipp .n .b { overflow: visible; white-space: nowrap; color: rgb(153, 153=
+, 170); vertical-align: middle; padding: 0px 6px 0px 0px !important; text-a=
+lign: right !important; }
+
+#wm-ipp .n .y .b { padding: 0px 6px 2px 0px !important; }
+
+#wm-ipp .n .c { background: rgb(0, 0, 0); color: rgb(255, 255, 0); font-wei=
+ght: bold; text-align: center; padding: 0px !important; }
+
+#wm-ipp.hi .n td.c { color: rgb(236, 0, 140); }
+
+#wm-ipp .n td.f { overflow: visible; white-space: nowrap; color: rgb(153, 1=
+53, 170); vertical-align: middle; padding: 0px 0px 0px 6px !important; text=
+-align: left !important; }
+
+#wm-ipp .n tr.m td { text-transform: uppercase; white-space: nowrap; paddin=
+g: 2px 0px; }
+
+#wm-ipp .c .s { vertical-align: bottom; padding: 0px 5px 0px 0px !important=
+; }
+
+#wm-ipp #wm-nav-captures { white-space: nowrap; }
+
+#wm-ipp .c .s a.t { color: rgb(51, 51, 255); font-weight: bold; line-height=
+: 1.8; }
+
+#wm-ipp .c .s div.r { color: rgb(102, 102, 102); font-size: 9px; white-spac=
+e: nowrap; }
+
+#wm-ipp .c .k { padding-bottom: 1px; }
+
+#wm-ipp .c .s { padding: 0px 5px 2px 0px !important; }
+
+#wm-ipp td#displayMonthEl { padding: 2px 0px !important; }
+
+#wm-ipp td#displayYearEl { padding: 0px 0px 2px !important; }
+
+div#wm-ipp-sparkline { position: relative; white-space: nowrap; background-=
+color: rgb(255, 255, 255); cursor: pointer; line-height: 0.9; }
+
+#sparklineImgId, #wm-sparkline-canvas { position: relative; z-index: 9012; =
+max-width: none; }
+
+#wm-ipp-sparkline div.yt { position: absolute; top: 0px; z-index: 9010 !imp=
+ortant; background-color: rgb(255, 255, 0) !important; }
+
+#wm-ipp-sparkline div.mt { position: absolute; top: 0px; z-index: 9013 !imp=
+ortant; background-color: rgb(236, 0, 140) !important; }
+
+#wm-ipp .r { margin-left: 4px; }
+
+#wm-ipp .r a { color: rgb(51, 51, 255); border: none; position: relative; b=
+ackground-color: transparent; text-decoration: none; background-repeat: no-=
+repeat !important; background-position: 100% 100% !important; }
+
+#wm-ipp #wm-capinfo { border-radius: 0px 0px 4px 4px; }
+
+#wm-ipp #wm-capinfo .c-logo { display: block; float: left; margin-right: 3p=
+x; width: 90px; min-height: 90px; max-height: 290px; border-radius: 45px; o=
+verflow: hidden; background-position: 50% center; background-size: auto 90p=
+x; box-shadow: rgb(208, 208, 208) 0px 0px 2px 2px inset; }
+
+#wm-ipp #wm-capinfo .c-logo span { display: inline-block; }
+
+#wm-ipp #wm-capinfo .c-logo img { height: 90px; position: relative; left: -=
+50%; }
+
+#wm-ipp #wm-capinfo .wm-title { font-size: 130%; }
+
+#wm-ipp #wm-capinfo a.wm-selector { display: inline-block; color: rgb(170, =
+170, 170); padding: 2px 8px; text-decoration: none !important; }
+
+#wm-ipp #wm-capinfo a.wm-selector.selected { background-color: rgb(102, 102=
+, 102); }
+
+#wm-ipp #wm-capinfo a.wm-selector:hover { color: rgb(255, 255, 255); }
+
+#wm-ipp #wm-capinfo.notice-only #wm-capinfo-collected-by, #wm-ipp #wm-capin=
+fo.notice-only #wm-capinfo-timestamps { display: none; }
+
+#wm-ipp #wm-capinfo #wm-capinfo-notice .wm-capinfo-content { background-col=
+or: rgb(255, 255, 0); padding: 5px; font-size: 14px; text-align: center; }
+
+#wm-ipp #wm-capinfo #wm-capinfo-notice .wm-capinfo-content * { font-size: 1=
+4px; text-align: center; }
+
+#wm-ipp #wm-expand { right: 1px; bottom: -1px; color: rgb(255, 255, 255); b=
+ackground-color: rgb(102, 102, 102) !important; padding: 0px 5px 0px 3px !i=
+mportant; border-radius: 3px 3px 0px 0px !important; }
+
+#wm-ipp #wm-expand span { color: rgb(255, 255, 255); }
+
+#wm-ipp #wm-expand #wm-expand-icon { display: inline-block; transition: tra=
+nsform 0.5s ease 0s; transform-origin: 50% 45%; }
+
+#wm-ipp #wm-expand.wm-open #wm-expand-icon { transform: rotate(180deg); }
+
+#wm-ipp #wmtb { text-align: right; }
+
+#wm-ipp #wmtb #wmtbURL { width: calc(100% - 45px); }
+
+#wm-ipp #wm-graph-anchor { border-right: 1px solid rgb(204, 204, 204); }
+
+html.wb-highlight { box-shadow: rgb(165, 14, 58) 0px 0px 0px 3px inset !imp=
+ortant; }
+
+.wb-highlight { outline: rgb(165, 14, 58) solid 3px !important; }
+
+#wm-ipp-print { display: none !important; }
+
+@media print {
+  #wm-ipp-base { display: none !important; }
+  #wm-ipp-print { white-space: nowrap; overflow: hidden; text-overflow: ell=
+ipsis; display: block !important; }
+}
+
+@media (max-width: 414px) {
+  #wm-ipp .xxs { display: none !important; }
+}
+
+@media (min-width: 1055px) {
+  #wm-ipp #wm-graph-anchor { display: block !important; }
+}
+
+@media (max-width: 1054px) {
+  #wm-ipp #wm-graph-anchor { display: none !important; }
+}
+
+@media (max-width: 1163px) {
+  #wm-logo { display: none !important; }
+}
+
+#wm-btns { white-space: nowrap; margin-top: -2px; }
+
+#wm-btns #wm-save-snapshot-open { margin-right: 7px; top: -6px; }
+
+#wm-btns #wm-sign-in { box-sizing: content-box; display: none; margin-right=
+: 7px; top: -8px; border: 2px solid rgb(0, 0, 0); border-radius: 14px; padd=
+ing-right: 2px; padding-bottom: 2px; width: 11px; height: 11px; }
+
+#wm-btns #wm-sign-in > .iconochive-person { font-size: 12.5px; }
+
+#wm-save-snapshot-open > .iconochive-web { color: rgb(0, 0, 0); font-size: =
+160%; }
+
+#wm-ipp #wm-share { display: flex; align-items: flex-end; justify-content: =
+space-between; }
+
+#wm-share > #wm-screenshot { display: inline-block; margin-right: 3px; visi=
+bility: hidden; }
+
+#wm-screenshot > .iconochive-image { color: rgb(0, 0, 0); font-size: 160%; =
+}
+
+#wm-share > #wm-video { display: inline-block; margin-right: 3px; visibilit=
+y: hidden; }
+
+#wm-video > .iconochive-movies { color: rgb(0, 0, 0); display: inline-block=
+; font-size: 150%; margin-bottom: 2px; }
+
+#wm-btns #wm-save-snapshot-in-progress { display: none; font-size: 160%; op=
+acity: 0.5; position: relative; margin-right: 7px; top: -5px; }
+
+#wm-btns #wm-save-snapshot-success { display: none; color: green; position:=
+ relative; top: -7px; }
+
+#wm-btns #wm-save-snapshot-fail { display: none; color: red; position: rela=
+tive; top: -7px; }
+
+.wm-icon-screen-shot { display: inline-block; background: url("../images/we=
+b-screenshot.svg") 0% 0% / contain no-repeat !important; width: 22px !impor=
+tant; height: 19px !important; }
+
+#donato { height: 0px; margin: 0px; padding: 0px; border-bottom: 1px solid =
+rgb(153, 153, 153) !important; }
+
+body.wm-modal { height: auto !important; overflow: hidden !important; }
+
+#donato #donato-base { width: 100%; height: 100%; margin: 0px; padding: 0px=
+; position: absolute; z-index: 2147483639; }
+
+body.wm-modal #donato #donato-base { position: fixed; inset: 0px; z-index: =
+2147483640; }
+
+.wb-autocomplete-suggestions { font-family: "Lucida Grande", Helvetica, Ari=
+al, sans-serif; font-size: 12px; text-align: left; cursor: default; border-=
+width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; =
+border-left-style: solid; border-right-color: rgb(204, 204, 204); border-bo=
+ttom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); bord=
+er-image: initial; border-top-style: initial; border-top-color: initial; ba=
+ckground: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) -1px 1px 3px; =
+position: absolute; display: none; z-index: 2147483647; max-height: 254px; =
+overflow: hidden auto; box-sizing: border-box; }
+
+.wb-autocomplete-suggestion { position: relative; padding: 0px 0.6em; line-=
+height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsi=
+s; font-size: 1.02em; color: rgb(51, 51, 51); }
+
+.wb-autocomplete-suggestion b { font-weight: bold; }
+
+.wb-autocomplete-suggestion.selected { background: rgb(240, 240, 240); }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/_static/css/record.css
+
+@charset "utf-8";
+
+.__wb_overlay { opacity: 0.6; background-color: rgb(0, 0, 0); position: fix=
+ed; width: 100%; height: 100%; top: 0px; left: 0px; padding: 0px !important=
+; border: 0px !important; margin: 0px !important; border-radius: 0px !impor=
+tant; z-index: 2147483643 !important; }
+
+#__wb_record_overlay_div { cursor: wait !important; }
+
+.__wb_record_content { opacity: 1; position: fixed; top: 50%; left: 50%; bo=
+rder-radius: 8px; box-shadow: rgb(0, 0, 0) 0px 0px 30px 5px; margin: 0px !i=
+mportant; padding: 0px !important; background-color: rgb(255, 255, 255) !im=
+portant; z-index: 2147483644 !important; }
+
+#__wb_record_content_loader { cursor: wait !important; padding-top: 30px !i=
+mportant; margin-left: -287px !important; margin-top: -177px !important; wi=
+dth: 574px !important; height: 355px !important; }
+
+#__wb_record_content_done { margin-left: -427px !important; margin-top: -17=
+7px !important; width: 855px !important; height: 355px !important; }
+
+.__wb_record_content > * { margin: auto !important; display: block !importa=
+nt; text-align: center !important; font-family: "Open Sans", "Helvetica Neu=
+e", Helvetica, Arial, sans-serif !important; }
+
+.__wb_record_content > wb_h1 { line-height: 2em; font-size: 36px !important=
+; color: rgb(34, 34, 34) !important; margin: 0px !important; padding: 0px !=
+important; font-weight: normal !important; width: auto !important; height: =
+auto !important; }
+
+.__wb_record_content > wb_p { line-height: 2em; font-size: 17px !important;=
+ color: rgb(34, 34, 34) !important; margin: 8px 0px !important; padding: 0p=
+x !important; }
+
+.__wb_record_content > #_wb_logo { margin-bottom: 10px !important; }
+
+.__wb_record_content > #_wb_spinner { margin-top: 30px !important; margin-b=
+ottom: 30px !important; }
+
+.__wb_record_content > #_wb_curr_url { text-decoration: underline !importan=
+t; font-weight: bold !important; }
+
+#__wb_record_content_done > #__wb_link { font-size: 20px !important; border=
+: 1px solid rgb(170, 170, 170) !important; padding: 3px !important; text-al=
+ign: center !important; width: 80% !important; height: auto !important; }
+
+#__wb_record_content_done > #__wb_link:focus { outline: 0px !important; bor=
+der-color: rgb(66, 139, 202) !important; }
+
+#__wb_record_content_done > #__wb_donate_close { float: right; display: inl=
+ine-block; font-size: 18px !important; width: auto !important; margin: 0px =
+!important; padding: 8px 8px 0px 0px !important; }
+
+#__wb_donate_close > #__wb_record_done_close { display: inline-block; curso=
+r: pointer !important; vertical-align: bottom !important; }
+
+#__wb_record_content_done > #__wb_donate_close a { color: rgb(66, 139, 202)=
+ !important; }
+
+#__wb_record_content_done > #__wb_donate_close a:link { color: rgb(66, 139,=
+ 202) !important; text-decoration: none !important; margin-right: 16px !imp=
+ortant; }
+
+#__wb_record_content_done > #__wb_donate_close a:visited { color: rgb(66, 1=
+39, 202) !important; }
+
+#__wb_record_content_done > #__wb_donate_close a:hover { color: rgb(0, 177,=
+ 247) !important; }
+
+#__wb_spinningSquaresG { position: relative; width: 240px; height: 20px; pa=
+dding: 0px !important; margin: 30px 0px 30px 160px !important; border: 0px =
+!important; border-radius: 0px !important; }
+
+.__wb_spinningSquaresG { position: absolute; top: 0px; background-color: rg=
+b(0, 0, 0); width: 22px; height: 22px; animation-name: bounce_spinningSquar=
+esG; animation-duration: 1.9s; animation-iteration-count: infinite; transfo=
+rm: scale(0.3); margin: 0px !important; padding: 0px !important; border: 0p=
+x !important; border-radius: 0px !important; }
+
+#__wb_spinningSquaresG_1 { left: 0px; animation-delay: 0.76s; }
+
+#__wb_spinningSquaresG_2 { left: 30px; animation-delay: 0.95s; }
+
+#__wb_spinningSquaresG_3 { left: 60px; animation-delay: 1.14s; }
+
+#__wb_spinningSquaresG_4 { left: 90px; animation-delay: 1.33s; }
+
+#__wb_spinningSquaresG_5 { left: 120px; animation-delay: 1.52s; }
+
+#__wb_spinningSquaresG_6 { left: 150px; animation-delay: 1.71s; }
+
+#__wb_spinningSquaresG_7 { left: 180px; animation-delay: 1.9s; }
+
+#__wb_spinningSquaresG_8 { left: 210px; animation-delay: 2.09s; }
+
+@-webkit-keyframes bounce_spinningSquaresG {=20
+  0% { transform: scale(1); background-color: rgb(0, 0, 0); }
+  100% { transform: scale(0.3) rotate(90deg); background-color: rgb(255, 25=
+5, 255); }
+}
+
+@keyframes bounce_spinningSquaresG {=20
+  0% { transform: scale(1); background-color: rgb(0, 0, 0); }
+  100% { transform: scale(0.3) rotate(90deg); background-color: rgb(255, 25=
+5, 255); }
+}
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/_static/css/iconochive.css?v=qtvMKcIJ
+
+@charset "utf-8";
+
+@font-face { font-family: Iconochive-Regular; src: url("https://archive.org=
+/includes/fonts/Iconochive-Regular.eot?#iefix-ccsheb") format("embedded-ope=
+ntype"), url("https://archive.org/includes/fonts/Iconochive-Regular.woff?-c=
+csheb") format("woff"), url("https://archive.org/includes/fonts/Iconochive-=
+Regular.ttf?-ccsheb") format("truetype"), url("https://archive.org/includes=
+/fonts/Iconochive-Regular.svg?-ccsheb#Iconochive-Regular") format("svg"); f=
+ont-weight: normal; font-style: normal; }
+
+[class^=3D"iconochive-"], [class*=3D" iconochive-"] { speak: none; font-sty=
+le: normal; font-weight: normal; font-variant: normal; text-transform: none=
+; line-height: 1; -webkit-font-smoothing: antialiased; font-family: Iconoch=
+ive-Regular !important; }
+
+.iconochive-Uplevel::before { content: "=E2=86=B5"; }
+
+.iconochive-exit::before { content: "=F0=9F=9A=A3"; }
+
+.iconochive-beta::before { content: "=CE=B2"; }
+
+.iconochive-logo::before { content: "=F0=9F=8F=9B"; }
+
+.iconochive-audio::before { content: "=F0=9F=95=A8"; }
+
+.iconochive-movies::before { content: "=F0=9F=8E=9E"; }
+
+.iconochive-software::before { content: "=F0=9F=92=BE"; }
+
+.iconochive-texts::before { content: "=F0=9F=95=AE"; }
+
+.iconochive-etree::before { content: "=F0=9F=8E=A4"; }
+
+.iconochive-image::before { content: "=F0=9F=96=BC"; }
+
+.iconochive-web::before { content: "=F0=9F=97=94"; }
+
+.iconochive-collection::before { content: "=E2=88=91"; }
+
+.iconochive-folder::before { content: "=F0=9F=93=82"; }
+
+.iconochive-data::before { content: "=F0=9F=97=83"; }
+
+.iconochive-tv::before { content: "=F0=9F=93=BA"; }
+
+.iconochive-article::before { content: "=F0=9F=97=8F"; }
+
+.iconochive-question::before { content: "=E2=8D=B0"; }
+
+.iconochive-question-dark::before { content: "?"; }
+
+.iconochive-info::before { content: "i"; }
+
+.iconochive-info-small::before { content: "=E2=93=98"; }
+
+.iconochive-comment::before { content: "=F0=9F=97=A9"; }
+
+.iconochive-comments::before { content: "=F0=9F=97=AA"; }
+
+.iconochive-person::before { content: "=F0=9F=91=A4"; }
+
+.iconochive-people::before { content: "=F0=9F=91=A5"; }
+
+.iconochive-eye::before { content: "=F0=9F=91=81"; }
+
+.iconochive-rss::before { content: "=E2=88=9E"; }
+
+.iconochive-time::before { content: "=F0=9F=95=91"; }
+
+.iconochive-quote::before { content: "=E2=9D=9D"; }
+
+.iconochive-disc::before { content: "=F0=9F=92=BF"; }
+
+.iconochive-tv-commercial::before { content: "=F0=9F=92=B0"; }
+
+.iconochive-search::before { content: "=F0=9F=94=8D"; }
+
+.iconochive-search-star::before { content: "=E2=9C=BD"; }
+
+.iconochive-tiles::before { content: "=E2=8A=9E"; }
+
+.iconochive-list::before { content: "=E2=87=B6"; }
+
+.iconochive-list-bulleted::before { content: "=E2=8C=97"; }
+
+.iconochive-latest::before { content: "=E2=88=88"; }
+
+.iconochive-left::before { content: "=CB=82"; }
+
+.iconochive-right::before { content: "=CB=83"; }
+
+.iconochive-left-solid::before { content: "=E2=97=82"; }
+
+.iconochive-right-solid::before { content: "=E2=96=B8"; }
+
+.iconochive-up-solid::before { content: "=E2=96=B4"; }
+
+.iconochive-down-solid::before { content: "=E2=96=BE"; }
+
+.iconochive-dot::before { content: "=E2=8F=A4"; }
+
+.iconochive-dots::before { content: "=E2=96=A6"; }
+
+.iconochive-columns::before { content: "=E2=96=AF"; }
+
+.iconochive-sort::before { content: "=E2=87=95"; }
+
+.iconochive-atoz::before { content: "=F0=9F=94=A4"; }
+
+.iconochive-ztoa::before { content: "=F0=9F=94=A5"; }
+
+.iconochive-upload::before { content: "=F0=9F=93=A4"; }
+
+.iconochive-download::before { content: "=F0=9F=93=A5"; }
+
+.iconochive-favorite::before { content: "=E2=98=85"; }
+
+.iconochive-heart::before { content: "=E2=99=A5"; }
+
+.iconochive-play::before { content: "=E2=96=B6"; }
+
+.iconochive-play-framed::before { content: "=F0=9F=8E=AC"; }
+
+.iconochive-fullscreen::before { content: "=E2=9B=B6"; }
+
+.iconochive-mute::before { content: "=F0=9F=94=87"; }
+
+.iconochive-unmute::before { content: "=F0=9F=94=8A"; }
+
+.iconochive-share::before { content: "=F0=9F=8E=81"; }
+
+.iconochive-edit::before { content: "=E2=9C=8E"; }
+
+.iconochive-reedit::before { content: "=E2=9C=90"; }
+
+.iconochive-gear::before { content: "=E2=9A=99"; }
+
+.iconochive-remove-circle::before { content: "=E2=9D=8E"; }
+
+.iconochive-plus-circle::before { content: "=F0=9F=97=96"; }
+
+.iconochive-minus-circle::before { content: "=F0=9F=97=95"; }
+
+.iconochive-x::before { content: "=F0=9F=97=99"; }
+
+.iconochive-fork::before { content: "=E2=8B=94"; }
+
+.iconochive-trash::before { content: "=F0=9F=97=91"; }
+
+.iconochive-warning::before { content: "=E2=9A=A0"; }
+
+.iconochive-flash::before { content: "=F0=9F=97=B2"; }
+
+.iconochive-world::before { content: "=F0=9F=97=BA"; }
+
+.iconochive-lock::before { content: "=F0=9F=94=92"; }
+
+.iconochive-unlock::before { content: "=F0=9F=94=93"; }
+
+.iconochive-twitter::before { content: "=F0=9F=90=A6"; }
+
+.iconochive-facebook::before { content: "f"; }
+
+.iconochive-googleplus::before { content: "g"; }
+
+.iconochive-reddit::before { content: "=F0=9F=91=BD"; }
+
+.iconochive-tumblr::before { content: "T"; }
+
+.iconochive-pinterest::before { content: "=F0=9D=93=9F"; }
+
+.iconochive-popcorn::before { content: "=F0=9F=92=A5"; }
+
+.iconochive-email::before { content: "=F0=9F=93=A7"; }
+
+.iconochive-embed::before { content: "=F0=9F=94=97"; }
+
+.iconochive-gamepad::before { content: "=F0=9F=95=B9"; }
+
+.iconochive-Zoom_In::before { content: "+"; }
+
+.iconochive-Zoom_Out::before { content: "-"; }
+
+.iconochive-RSS::before { content: "=F0=9F=93=A8"; }
+
+.iconochive-Light_Bulb::before { content: "=F0=9F=92=A1"; }
+
+.iconochive-Add::before { content: "=E2=8A=95"; }
+
+.iconochive-Tab_Activity::before { content: "=E2=8C=98"; }
+
+.iconochive-Forward::before { content: "=E2=8F=A9"; }
+
+.iconochive-Backward::before { content: "=E2=8F=AA"; }
+
+.iconochive-No_Audio::before { content: "=F0=9F=94=88"; }
+
+.iconochive-Pause::before { content: "=E2=8F=B8"; }
+
+.iconochive-No_Favorite::before { content: "=E2=98=86"; }
+
+.iconochive-Unike::before { content: "=E2=99=A1"; }
+
+.iconochive-Song::before { content: "=E2=99=AB"; }
+
+.iconochive-No_Flag::before { content: "=E2=9A=90"; }
+
+.iconochive-Flag::before { content: "=E2=9A=91"; }
+
+.iconochive-Done::before { content: "=E2=9C=93"; }
+
+.iconochive-Check::before { content: "=E2=9C=94"; }
+
+.iconochive-Refresh::before { content: "=E2=9F=B3"; }
+
+.iconochive-Headphones::before { content: "=F0=9F=8E=A7"; }
+
+.iconochive-Chart::before { content: "=F0=9F=93=88"; }
+
+.iconochive-Bookmark::before { content: "=F0=9F=93=91"; }
+
+.iconochive-Documents::before { content: "=F0=9F=93=9A"; }
+
+.iconochive-Newspaper::before { content: "=F0=9F=93=B0"; }
+
+.iconochive-Podcast::before { content: "=F0=9F=93=B6"; }
+
+.iconochive-Radio::before { content: "=F0=9F=93=BB"; }
+
+.iconochive-Cassette::before { content: "=F0=9F=93=BC"; }
+
+.iconochive-Shuffle::before { content: "=F0=9F=94=80"; }
+
+.iconochive-Loop::before { content: "=F0=9F=94=81"; }
+
+.iconochive-Low_Audio::before { content: "=F0=9F=94=89"; }
+
+.iconochive-First::before { content: "=F0=9F=8E=96"; }
+
+.iconochive-Invisible::before { content: "=F0=9F=95=B6"; }
+
+.iconochive-Computer::before { content: "=F0=9F=96=B3"; }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/css/variables.css
+
+@charset "utf-8";
+
+:root { --sidebar-width: 300px; --page-padding: 15px; --content-max-width: =
+750px; --menu-bar-height: 50px; }
+
+.ayu { --bg: hsl(210, 25%, 8%); --fg: #c5c5c5; --sidebar-bg: #14191f; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #5c6773; --sidebar-active: #ffb45=
+4; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #b7b9cc; --links: #0096cf; --inline-code-color: #ffb454=
+; --theme-popup-bg: #14191f; --theme-popup-border: #5c6773; --theme-hover: =
+#191f26; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22%)=
+; --table-border-color: hsl(210, 25%, 13%); --table-header-bg: hsl(210, 25%=
+, 28%); --table-alternate-bg: hsl(210, 25%, 11%); --searchbar-border-color:=
+ #848484; --searchbar-bg: #424242; --searchbar-fg: #fff; --searchbar-shadow=
+-color: #d4c89f; --searchresults-header-fg: #666; --searchresults-border-co=
+lor: #888; --searchresults-li-bg: #252932; --search-mark-bg: #e3b171; }
+
+.coal { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c2f; --sid=
+ebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-active: #3473a=
+d; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --icons: #434=
+84d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color: #c5c8c6=
+; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --theme-hover: =
+#1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, 21%, 23%)=
+; --table-border-color: hsl(200, 7%, 13%); --table-header-bg: hsl(200, 7%, =
+28%); --table-alternate-bg: hsl(200, 7%, 11%); --searchbar-border-color: #a=
+aa; --searchbar-bg: #b7b7b7; --searchbar-fg: #000; --searchbar-shadow-color=
+: #aaa; --searchresults-header-fg: #666; --searchresults-border-color: #98a=
+3ad; --searchresults-li-bg: #2b2b2f; --search-mark-bg: #355c7d; }
+
+.light { --bg: hsl(0, 0%, 100%); --fg: hsl(0, 0%, 0%); --sidebar-bg: #fafaf=
+a; --sidebar-fg: hsl(0, 0%, 0%); --sidebar-non-existant: #aaaaaa; --sidebar=
+-active: #1f1fff; --sidebar-spacer: #f4f4f4; --scrollbar: #8F8F8F; --icons:=
+ #747474; --icons-hover: #000000; --links: #20609f; --inline-code-color: #3=
+01900; --theme-popup-bg: #fafafa; --theme-popup-border: #cccccc; --theme-ho=
+ver: #e6e6e6; --quote-bg: hsl(197, 37%, 96%); --quote-border: hsl(197, 37%,=
+ 91%); --table-border-color: hsl(0, 0%, 95%); --table-header-bg: hsl(0, 0%,=
+ 80%); --table-alternate-bg: hsl(0, 0%, 97%); --searchbar-border-color: #aa=
+a; --searchbar-bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color:=
+ #aaa; --searchresults-header-fg: #666; --searchresults-border-color: #888;=
+ --searchresults-li-bg: #e4f2fe; --search-mark-bg: #a2cff5; }
+
+.navy { --bg: hsl(226, 23%, 11%); --fg: #bcbdd0; --sidebar-bg: #282d3f; --s=
+idebar-fg: #c8c9db; --sidebar-non-existant: #505274; --sidebar-active: #2b7=
+9a2; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #7=
+37480; --icons-hover: #b7b9cc; --links: #2b79a2; --inline-code-color: #c5c8=
+c6; --theme-popup-bg: #161923; --theme-popup-border: #737480; --theme-hover=
+: #282e40; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22=
+%); --table-border-color: hsl(226, 23%, 16%); --table-header-bg: hsl(226, 2=
+3%, 31%); --table-alternate-bg: hsl(226, 23%, 14%); --searchbar-border-colo=
+r: #aaa; --searchbar-bg: #aeaec6; --searchbar-fg: #000; --searchbar-shadow-=
+color: #aaa; --searchresults-header-fg: #5f5f71; --searchresults-border-col=
+or: #5c5c68; --searchresults-li-bg: #242430; --search-mark-bg: #a2cff5; }
+
+.rust { --bg: hsl(60, 9%, 87%); --fg: #262625; --sidebar-bg: #3b2e2a; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #505254; --sidebar-active: #e69f6=
+7; --sidebar-spacer: #45373a; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #262625; --links: #2b79a2; --inline-code-color: #6e6b5e=
+; --theme-popup-bg: #e1e1db; --theme-popup-border: #b38f6b; --theme-hover: =
+#99908a; --quote-bg: hsl(60, 5%, 75%); --quote-border: hsl(60, 5%, 70%); --=
+table-border-color: hsl(60, 9%, 82%); --table-header-bg: #b3a497; --table-a=
+lternate-bg: hsl(60, 9%, 84%); --searchbar-border-color: #aaa; --searchbar-=
+bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color: #aaa; --search=
+results-header-fg: #666; --searchresults-border-color: #888; --searchresult=
+s-li-bg: #dec2a2; --search-mark-bg: #e69f67; }
+
+.sel4cp_theme { --bg: hsl(60, 9%, 87%); --fg: #262625; --sidebar-bg: #a1c86=
+1; --sidebar-fg: #555; --sidebar-non-existant: #505254; --sidebar-active: #=
+333; --sidebar-spacer: #45373a; --scrollbar: var(--sidebar-fg); --icons: #7=
+37480; --icons-hover: #262625; --links: #2b79a2; --inline-code-color: #6e6b=
+5e; --theme-popup-bg: #e1e1db; --theme-popup-border: #b38f6b; --theme-hover=
+: #99908a; --quote-bg: hsl(60, 5%, 75%); --quote-border: hsl(60, 5%, 70%); =
+--table-border-color: hsl(60, 9%, 82%); --table-header-bg: #b3a497; --table=
+-alternate-bg: hsl(60, 9%, 84%); --searchbar-border-color: #aaa; --searchba=
+r-bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color: #aaa; --sear=
+chresults-header-fg: #666; --searchresults-border-color: #888; --searchresu=
+lts-li-bg: #dec2a2; --search-mark-bg: #e69f67; }
+
+@media (prefers-color-scheme: dark) {
+  .light.no-js { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c=
+2f; --sidebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-activ=
+e: #3473ad; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --ic=
+ons: #43484d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color=
+: #c5c8c6; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --them=
+e-hover: #1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, =
+21%, 23%); --table-border-color: hsl(200, 7%, 13%); --table-header-bg: hsl(=
+200, 7%, 28%); --table-alternate-bg: hsl(200, 7%, 11%); --searchbar-border-=
+color: #aaa; --searchbar-bg: #b7b7b7; --searchbar-fg: #000; --searchbar-sha=
+dow-color: #aaa; --searchresults-header-fg: #666; --searchresults-border-co=
+lor: #98a3ad; --searchresults-li-bg: #2b2b2f; --search-mark-bg: #355c7d; }
+}
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/css/general.css
+
+@charset "utf-8";
+
+@import url("/web/20220930035910cs_/https://summit.ivanvelickovic.com/css/v=
+ariables.css");
+
+:root { font-size: 62.5%; }
+
+html { font-family: "Open Sans", sans-serif; color: var(--fg); background-c=
+olor: var(--bg); text-size-adjust: none; }
+
+body { margin: 0px; font-size: 1.6rem; overflow-x: hidden; }
+
+code { font-size: 0.875em; font-family: "Source Code Pro", Consolas, "Ubunt=
+u Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important; }
+
+main { overflow-wrap: break-word; }
+
+.table-wrapper { overflow-x: auto; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: unset; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.boring { opacity: 0.6; }
+
+.hide-boring .boring { display: none; }
+
+.hidden { display: none !important; }
+
+h2, h3 { margin-top: 2.5em; }
+
+h4, h5 { margin-top: 2em; }
+
+.header + .header h3, .header + .header h4, .header + .header h5 { margin-t=
+op: 1em; }
+
+h1:target::before, h2:target::before, h3:target::before, h4:target::before,=
+ h5:target::before, h6:target::before { display: inline-block; content: "=
+=C2=BB"; margin-left: -30px; width: 30px; }
+
+:target { scroll-margin-top: calc(var(--menu-bar-height) + 0.5em); }
+
+.page { outline: 0px; padding: 0 var(--page-padding); margin-top: calc(0px =
+- var(--menu-bar-height)); }
+
+.page-wrapper { box-sizing: border-box; }
+
+.js:not(.sidebar-resizing) .page-wrapper { transition: margin-left 0.3s eas=
+e 0s, transform 0.3s ease 0s; }
+
+.content { overflow-y: auto; padding: 0px 5px 50px; }
+
+.content main { margin-left: auto; margin-right: auto; max-width: var(--con=
+tent-max-width); }
+
+.content p { line-height: 1.45em; }
+
+.content ol { line-height: 1.45em; }
+
+.content ul { line-height: 1.45em; }
+
+.content a { text-decoration: none; }
+
+.content a:hover { text-decoration: underline; }
+
+.content img, .content video { max-width: 100%; }
+
+.content .header:link, .content .header:visited { color: var(--fg); }
+
+.content .header:link, .content .header:visited:hover { text-decoration: no=
+ne; }
+
+table { margin: 0px auto; border-collapse: collapse; }
+
+table td { padding: 3px 20px; border: 1px var(--table-border-color) solid; =
+}
+
+table thead { background: var(--table-header-bg); }
+
+table thead td { font-weight: 700; border: none; }
+
+table thead th { padding: 3px 20px; }
+
+table thead tr { border: 1px var(--table-header-bg) solid; }
+
+table tbody tr:nth-child(2n) { background: var(--table-alternate-bg); }
+
+blockquote { margin: 20px 0px; padding: 0px 20px; color: var(--fg); backgro=
+und-color: var(--quote-bg); border-top: 0.1em solid var(--quote-border); bo=
+rder-bottom: 0.1em solid var(--quote-border); }
+
+:not(.footnote-definition) + .footnote-definition, .footnote-definition + :=
+not(.footnote-definition) { margin-top: 2em; }
+
+.footnote-definition { font-size: 0.9em; margin: 0.5em 0px; }
+
+.footnote-definition p { display: inline; }
+
+.tooltiptext { position: absolute; visibility: hidden; color: rgb(255, 255,=
+ 255); background-color: rgb(51, 51, 51); transform: translateX(-50%); left=
+: -8px; top: -35px; font-size: 0.8em; text-align: center; border-radius: 6p=
+x; padding: 5px 8px; margin: 5px; z-index: 1000; }
+
+.tooltipped .tooltiptext { visibility: visible; }
+
+.chapter li.part-title { color: var(--sidebar-fg); margin: 5px 0px; font-we=
+ight: bold; }
+
+.result-no-output { font-style: italic; }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035910cs_/https://summit.ivanvelickovic.com/css/variables.css
+
+@charset "utf-8";
+
+:root { --sidebar-width: 300px; --page-padding: 15px; --content-max-width: =
+750px; --menu-bar-height: 50px; }
+
+.ayu { --bg: hsl(210, 25%, 8%); --fg: #c5c5c5; --sidebar-bg: #14191f; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #5c6773; --sidebar-active: #ffb45=
+4; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #b7b9cc; --links: #0096cf; --inline-code-color: #ffb454=
+; --theme-popup-bg: #14191f; --theme-popup-border: #5c6773; --theme-hover: =
+#191f26; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22%)=
+; --table-border-color: hsl(210, 25%, 13%); --table-header-bg: hsl(210, 25%=
+, 28%); --table-alternate-bg: hsl(210, 25%, 11%); --searchbar-border-color:=
+ #848484; --searchbar-bg: #424242; --searchbar-fg: #fff; --searchbar-shadow=
+-color: #d4c89f; --searchresults-header-fg: #666; --searchresults-border-co=
+lor: #888; --searchresults-li-bg: #252932; --search-mark-bg: #e3b171; }
+
+.coal { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c2f; --sid=
+ebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-active: #3473a=
+d; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --icons: #434=
+84d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color: #c5c8c6=
+; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --theme-hover: =
+#1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, 21%, 23%)=
+; --table-border-color: hsl(200, 7%, 13%); --table-header-bg: hsl(200, 7%, =
+28%); --table-alternate-bg: hsl(200, 7%, 11%); --searchbar-border-color: #a=
+aa; --searchbar-bg: #b7b7b7; --searchbar-fg: #000; --searchbar-shadow-color=
+: #aaa; --searchresults-header-fg: #666; --searchresults-border-color: #98a=
+3ad; --searchresults-li-bg: #2b2b2f; --search-mark-bg: #355c7d; }
+
+.light { --bg: hsl(0, 0%, 100%); --fg: hsl(0, 0%, 0%); --sidebar-bg: #fafaf=
+a; --sidebar-fg: hsl(0, 0%, 0%); --sidebar-non-existant: #aaaaaa; --sidebar=
+-active: #1f1fff; --sidebar-spacer: #f4f4f4; --scrollbar: #8F8F8F; --icons:=
+ #747474; --icons-hover: #000000; --links: #20609f; --inline-code-color: #3=
+01900; --theme-popup-bg: #fafafa; --theme-popup-border: #cccccc; --theme-ho=
+ver: #e6e6e6; --quote-bg: hsl(197, 37%, 96%); --quote-border: hsl(197, 37%,=
+ 91%); --table-border-color: hsl(0, 0%, 95%); --table-header-bg: hsl(0, 0%,=
+ 80%); --table-alternate-bg: hsl(0, 0%, 97%); --searchbar-border-color: #aa=
+a; --searchbar-bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color:=
+ #aaa; --searchresults-header-fg: #666; --searchresults-border-color: #888;=
+ --searchresults-li-bg: #e4f2fe; --search-mark-bg: #a2cff5; }
+
+.navy { --bg: hsl(226, 23%, 11%); --fg: #bcbdd0; --sidebar-bg: #282d3f; --s=
+idebar-fg: #c8c9db; --sidebar-non-existant: #505274; --sidebar-active: #2b7=
+9a2; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #7=
+37480; --icons-hover: #b7b9cc; --links: #2b79a2; --inline-code-color: #c5c8=
+c6; --theme-popup-bg: #161923; --theme-popup-border: #737480; --theme-hover=
+: #282e40; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22=
+%); --table-border-color: hsl(226, 23%, 16%); --table-header-bg: hsl(226, 2=
+3%, 31%); --table-alternate-bg: hsl(226, 23%, 14%); --searchbar-border-colo=
+r: #aaa; --searchbar-bg: #aeaec6; --searchbar-fg: #000; --searchbar-shadow-=
+color: #aaa; --searchresults-header-fg: #5f5f71; --searchresults-border-col=
+or: #5c5c68; --searchresults-li-bg: #242430; --search-mark-bg: #a2cff5; }
+
+.rust { --bg: hsl(60, 9%, 87%); --fg: #262625; --sidebar-bg: #3b2e2a; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #505254; --sidebar-active: #e69f6=
+7; --sidebar-spacer: #45373a; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #262625; --links: #2b79a2; --inline-code-color: #6e6b5e=
+; --theme-popup-bg: #e1e1db; --theme-popup-border: #b38f6b; --theme-hover: =
+#99908a; --quote-bg: hsl(60, 5%, 75%); --quote-border: hsl(60, 5%, 70%); --=
+table-border-color: hsl(60, 9%, 82%); --table-header-bg: #b3a497; --table-a=
+lternate-bg: hsl(60, 9%, 84%); --searchbar-border-color: #aaa; --searchbar-=
+bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color: #aaa; --search=
+results-header-fg: #666; --searchresults-border-color: #888; --searchresult=
+s-li-bg: #dec2a2; --search-mark-bg: #e69f67; }
+
+.sel4cp_theme { --bg: hsl(60, 9%, 87%); --fg: #262625; --sidebar-bg: #a1c86=
+1; --sidebar-fg: #555; --sidebar-non-existant: #505254; --sidebar-active: #=
+333; --sidebar-spacer: #45373a; --scrollbar: var(--sidebar-fg); --icons: #7=
+37480; --icons-hover: #262625; --links: #2b79a2; --inline-code-color: #6e6b=
+5e; --theme-popup-bg: #e1e1db; --theme-popup-border: #b38f6b; --theme-hover=
+: #99908a; --quote-bg: hsl(60, 5%, 75%); --quote-border: hsl(60, 5%, 70%); =
+--table-border-color: hsl(60, 9%, 82%); --table-header-bg: #b3a497; --table=
+-alternate-bg: hsl(60, 9%, 84%); --searchbar-border-color: #aaa; --searchba=
+r-bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color: #aaa; --sear=
+chresults-header-fg: #666; --searchresults-border-color: #888; --searchresu=
+lts-li-bg: #dec2a2; --search-mark-bg: #e69f67; }
+
+@media (prefers-color-scheme: dark) {
+  .light.no-js { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c=
+2f; --sidebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-activ=
+e: #3473ad; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --ic=
+ons: #43484d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color=
+: #c5c8c6; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --them=
+e-hover: #1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, =
+21%, 23%); --table-border-color: hsl(200, 7%, 13%); --table-header-bg: hsl(=
+200, 7%, 28%); --table-alternate-bg: hsl(200, 7%, 11%); --searchbar-border-=
+color: #aaa; --searchbar-bg: #b7b7b7; --searchbar-fg: #000; --searchbar-sha=
+dow-color: #aaa; --searchresults-header-fg: #666; --searchresults-border-co=
+lor: #98a3ad; --searchresults-li-bg: #2b2b2f; --search-mark-bg: #355c7d; }
+}
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/css/chrome.css
+
+@charset "utf-8";
+
+@import url("/web/20220930035910cs_/https://summit.ivanvelickovic.com/css/v=
+ariables.css");
+
+::-webkit-scrollbar { background: var(--bg); }
+
+::-webkit-scrollbar-thumb { background: var(--scrollbar); }
+
+html { }
+
+#searchresults a, .content a:link, a:visited, a > .hljs { color: var(--link=
+s); }
+
+#menu-bar, #menu-bar-hover-placeholder { z-index: 101; margin: auto calc(0p=
+x - var(--page-padding)); }
+
+#menu-bar { position: relative; display: flex; flex-wrap: wrap; background-=
+color: var(--bg); border-bottom-color: var(--bg); border-bottom-width: 1px;=
+ border-bottom-style: solid; }
+
+#menu-bar.sticky, .js #menu-bar-hover-placeholder:hover + #menu-bar, .js #m=
+enu-bar:hover, .js.sidebar-visible #menu-bar { position: sticky; top: 0px !=
+important; }
+
+#menu-bar-hover-placeholder { position: sticky; top: 0px; height: var(--men=
+u-bar-height); }
+
+#menu-bar.bordered { border-bottom-color: var(--table-border-color); }
+
+#menu-bar i, #menu-bar .icon-button { position: relative; padding: 0px 8px;=
+ z-index: 10; line-height: var(--menu-bar-height); cursor: pointer; transit=
+ion: color 0.5s ease 0s; }
+
+@media only screen and (max-width: 420px) {
+  #menu-bar i, #menu-bar .icon-button { padding: 0px 5px; }
+}
+
+.icon-button { border: none; background: none; padding: 0px; color: inherit=
+; }
+
+.icon-button i { margin: 0px; }
+
+.right-buttons { margin: 0px 15px; }
+
+.right-buttons a { text-decoration: none; }
+
+.left-buttons { display: flex; margin: 0px 5px; }
+
+.no-js .left-buttons { display: none; }
+
+.menu-title { display: inline-block; font-weight: 200; font-size: 2.4rem; l=
+ine-height: var(--menu-bar-height); text-align: center; margin: 0px; flex: =
+1 1 0%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.js .menu-title { cursor: pointer; }
+
+.menu-bar, .menu-bar:visited, .nav-chapters, .nav-chapters:visited, .mobile=
+-nav-chapters, .mobile-nav-chapters:visited, .menu-bar .icon-button, .menu-=
+bar a i { color: var(--icons); }
+
+.menu-bar i:hover, .menu-bar .icon-button:hover, .nav-chapters:hover, .mobi=
+le-nav-chapters i:hover { color: var(--icons-hover); }
+
+.nav-chapters { font-size: 2.5em; text-align: center; text-decoration: none=
+; position: fixed; top: 0px; bottom: 0px; margin: 0px; max-width: 150px; mi=
+n-width: 90px; display: flex; place-content: center; flex-direction: column=
+; transition: color 0.5s ease 0s, background-color 0.5s ease 0s; }
+
+.nav-chapters:hover { text-decoration: none; background-color: var(--theme-=
+hover); transition: background-color 0.15s ease 0s, color 0.15s ease 0s; }
+
+.nav-wrapper { margin-top: 50px; display: none; }
+
+.mobile-nav-chapters { font-size: 2.5em; text-align: center; text-decoratio=
+n: none; width: 90px; border-radius: 5px; background-color: var(--sidebar-b=
+g); }
+
+.previous { float: left; }
+
+.next { float: right; right: var(--page-padding); }
+
+@media only screen and (max-width: 1080px) {
+  .nav-wide-wrapper { display: none; }
+  .nav-wrapper { display: block; }
+}
+
+@media only screen and (max-width: 1380px) {
+  .sidebar-visible .nav-wide-wrapper { display: none; }
+  .sidebar-visible .nav-wrapper { display: block; }
+}
+
+:not(pre) > .hljs { display: inline; padding: 0.1em 0.3em; border-radius: 3=
+px; }
+
+:not(pre):not(a) > .hljs { color: var(--inline-code-color); overflow-x: ini=
+tial; }
+
+a:hover > .hljs { text-decoration: underline; }
+
+pre { position: relative; }
+
+pre > .buttons { position: absolute; z-index: 100; right: 0px; top: 2px; ma=
+rgin: 0px; padding: 2px 0px; color: var(--sidebar-fg); cursor: pointer; vis=
+ibility: hidden; opacity: 0; transition: visibility 0.1s linear 0s, opacity=
+ 0.1s linear 0s; }
+
+pre:hover > .buttons { visibility: visible; opacity: 1; }
+
+pre > .buttons :hover { color: var(--sidebar-active); border-color: var(--i=
+cons-hover); background-color: var(--theme-hover); }
+
+pre > .buttons i { margin-left: 8px; }
+
+pre > .buttons button { cursor: inherit; margin: 0px 5px; padding: 3px 5px;=
+ font-size: 14px; border-style: solid; border-width: 1px; border-radius: 4p=
+x; border-color: var(--icons); background-color: var(--theme-popup-bg); tra=
+nsition: color 100ms ease 0s, border-color, background-color; color: var(--=
+icons); }
+
+@media (pointer: coarse) {
+  pre > .buttons button { padding: 0.3rem 1rem; }
+}
+
+pre > code { padding: 1rem; }
+
+.hljs.ace_editor { padding: 0rem; }
+
+pre > .result { margin-top: 10px; }
+
+#searchresults a { text-decoration: none; }
+
+mark { border-radius: 2px; padding: 0px 3px 1px; margin: 0px -3px -1px; bac=
+kground-color: var(--search-mark-bg); transition: background-color 300ms li=
+near 0s; cursor: pointer; }
+
+mark.fade-out { cursor: auto; background-color: rgba(0, 0, 0, 0) !important=
+; }
+
+.searchbar-outer { margin-left: auto; margin-right: auto; max-width: var(--=
+content-max-width); }
+
+#searchbar { width: 100%; margin: 5px auto 0px; padding: 10px 16px; transit=
+ion: box-shadow 300ms ease-in-out 0s; border: 1px solid var(--searchbar-bor=
+der-color); border-radius: 3px; background-color: var(--searchbar-bg); colo=
+r: var(--searchbar-fg); }
+
+#searchbar:focus, #searchbar.active { box-shadow: 0 0 3px var(--searchbar-s=
+hadow-color); }
+
+.searchresults-header { font-weight: bold; font-size: 1em; padding: 18px 0p=
+x 0px 5px; color: var(--searchresults-header-fg); }
+
+.searchresults-outer { margin-left: auto; margin-right: auto; max-width: va=
+r(--content-max-width); border-bottom: 1px dashed var(--searchresults-borde=
+r-color); }
+
+ul#searchresults { list-style: none; padding-left: 20px; }
+
+ul#searchresults li { margin: 10px 0px; padding: 2px; border-radius: 2px; }
+
+ul#searchresults li.focus { background-color: var(--searchresults-li-bg); }
+
+ul#searchresults span.teaser { display: block; clear: both; margin: 5px 0px=
+ 0px 20px; font-size: 0.8em; }
+
+ul#searchresults span.teaser em { font-weight: bold; font-style: normal; }
+
+.sidebar { position: fixed; left: 0px; top: 0px; bottom: 0px; width: var(--=
+sidebar-width); font-size: 0.875em; box-sizing: border-box; overscroll-beha=
+vior-y: contain; background-color: var(--sidebar-bg); color: var(--sidebar-=
+fg); }
+
+.sidebar-resizing { user-select: none; }
+
+.js:not(.sidebar-resizing) .sidebar { transition: transform 0.3s ease 0s; }
+
+.sidebar code { line-height: 2em; }
+
+.sidebar .sidebar-scrollbox { overflow-y: auto; position: absolute; inset: =
+0px; padding: 10px; }
+
+.sidebar .sidebar-resize-handle { position: absolute; cursor: col-resize; w=
+idth: 0px; right: 0px; top: 0px; bottom: 0px; }
+
+.js .sidebar .sidebar-resize-handle { cursor: col-resize; width: 5px; }
+
+.sidebar-hidden .sidebar { transform: translateX(calc(0px - var(--sidebar-w=
+idth))); }
+
+.sidebar::-webkit-scrollbar { background: var(--sidebar-bg); }
+
+.sidebar::-webkit-scrollbar-thumb { background: var(--scrollbar); }
+
+.sidebar-visible .page-wrapper { transform: translateX(var(--sidebar-width)=
+); }
+
+@media only screen and (min-width: 620px) {
+  .sidebar-visible .page-wrapper { transform: none; margin-left: var(--side=
+bar-width); }
+}
+
+.chapter { list-style: outside none none; padding-left: 0px; line-height: 2=
+.2em; }
+
+.chapter ol { width: 100%; }
+
+.chapter li { display: flex; color: var(--sidebar-non-existant); }
+
+.chapter li a { display: block; padding: 0px; text-decoration: none; color:=
+ var(--sidebar-fg); }
+
+.chapter li a:hover { color: var(--sidebar-active); }
+
+.chapter li a.active { color: var(--sidebar-active); }
+
+.chapter li > a.toggle { cursor: pointer; display: block; margin-left: auto=
+; padding: 0px 10px; user-select: none; opacity: 0.68; }
+
+.chapter li > a.toggle div { transition: transform 0.5s ease 0s; }
+
+.chapter li:not(.expanded) + li > ol { display: none; }
+
+.chapter li.chapter-item { line-height: 1.5em; margin-top: 0.6em; }
+
+.chapter li.expanded > a.toggle div { transform: rotate(90deg); }
+
+.spacer { width: 100%; height: 3px; margin: 5px 0px; }
+
+.chapter .spacer { background-color: var(--sidebar-spacer); }
+
+@media (-moz-touch-enabled: 1), (pointer: coarse) {
+  .chapter li a { padding: 5px 0px; }
+  .spacer { margin: 10px 0px; }
+}
+
+.section { list-style: outside none none; padding-left: 20px; line-height: =
+1.9em; }
+
+.theme-popup { position: absolute; left: 10px; top: var(--menu-bar-height);=
+ z-index: 1000; border-radius: 4px; font-size: 0.7em; color: var(--fg); bac=
+kground: var(--theme-popup-bg); border: 1px solid var(--theme-popup-border)=
+; margin: 0px; padding: 0px; list-style: none; display: none; }
+
+.theme-popup .default { color: var(--icons); }
+
+.theme-popup .theme { width: 100%; border: 0px; margin: 0px; padding: 2px 1=
+0px; line-height: 25px; white-space: nowrap; text-align: left; cursor: poin=
+ter; color: inherit; background: inherit; font-size: inherit; }
+
+.theme-popup .theme:hover { background-color: var(--theme-hover); }
+
+.theme-popup .theme:hover:first-child, .theme-popup .theme:hover:last-child=
+ { border-top-left-radius: inherit; border-top-right-radius: inherit; }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/css/print.css
+
+@charset "utf-8";
+
+#sidebar, #menu-bar, .nav-chapters, .mobile-nav-chapters { display: none; }
+
+#page-wrapper.page-wrapper { transform: none; margin-left: 0px; overflow-y:=
+ initial; }
+
+#content { max-width: none; margin: 0px; padding: 0px; }
+
+.page { overflow-y: initial; }
+
+code { background-color: rgb(102, 102, 102); border-radius: 5px; -webkit-pr=
+int-color-adjust: exact; }
+
+pre > .buttons { z-index: 2; }
+
+a, a:visited, a:active, a:hover { color: rgb(65, 131, 196); text-decoration=
+: none; }
+
+h1, h2, h3, h4, h5, h6 { break-inside: avoid; break-after: avoid; }
+
+pre, code { break-inside: avoid; white-space: pre-wrap; }
+
+.fa { display: none !important; }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/FontAwesome/css/font-awesome.css
+
+@charset "utf-8";
+
+@font-face { font-family: FontAwesome; src: url("/web/20220930035910im_/htt=
+ps://summit.ivanvelickovic.com/FontAwesome/fonts/fontawesome-webfont.eot#ie=
+fix&v=3D4.7.0") format("embedded-opentype"), url("/web/20220930035910im_/ht=
+tps://summit.ivanvelickovic.com/FontAwesome/fonts/fontawesome-webfont.woff2=
+?v=3D4.7.0") format("woff2"), url("/web/20220930035910im_/https://summit.iv=
+anvelickovic.com/FontAwesome/fonts/fontawesome-webfont.woff?v=3D4.7.0") for=
+mat("woff"), url("/web/20220930035910im_/https://summit.ivanvelickovic.com/=
+FontAwesome/fonts/fontawesome-webfont.ttf?v=3D4.7.0") format("truetype"), u=
+rl("/web/20220930035910im_/https://summit.ivanvelickovic.com/FontAwesome/fo=
+nts/fontawesome-webfont.svg?v=3D4.7.0#fontawesomeregular") format("svg"); f=
+ont-weight: normal; font-style: normal; }
+
+.fa { display: inline-block; font-style: normal; font-variant: normal; font=
+-weight: normal; font-stretch: normal; line-height: 1; font-family: FontAwe=
+some; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: ant=
+ialiased; }
+
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.fa-2x { font-size: 2em; }
+
+.fa-3x { font-size: 3em; }
+
+.fa-4x { font-size: 4em; }
+
+.fa-5x { font-size: 5em; }
+
+.fa-fw { width: 1.28571em; text-align: center; }
+
+.fa-ul { padding-left: 0px; margin-left: 2.14286em; list-style-type: none; =
+}
+
+.fa-ul > li { position: relative; }
+
+.fa-li { position: absolute; left: -2.14286em; width: 2.14286em; top: 0.142=
+857em; text-align: center; }
+
+.fa-li.fa-lg { left: -1.85714em; }
+
+.fa-border { padding: 0.2em 0.25em 0.15em; border: 0.08em solid rgb(238, 23=
+8, 238); border-radius: 0.1em; }
+
+.fa-pull-left { float: left; }
+
+.fa-pull-right { float: right; }
+
+.fa.fa-pull-left { margin-right: 0.3em; }
+
+.fa.fa-pull-right { margin-left: 0.3em; }
+
+.pull-right { float: right; }
+
+.pull-left { float: left; }
+
+.fa.pull-left { margin-right: 0.3em; }
+
+.fa.pull-right { margin-left: 0.3em; }
+
+.fa-spin { animation: 2s linear 0s infinite normal none running fa-spin; }
+
+.fa-pulse { animation: 1s steps(8) 0s infinite normal none running fa-spin;=
+ }
+
+@-webkit-keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+.fa-rotate-90 { transform: rotate(90deg); }
+
+.fa-rotate-180 { transform: rotate(180deg); }
+
+.fa-rotate-270 { transform: rotate(270deg); }
+
+.fa-flip-horizontal { transform: scale(-1, 1); }
+
+.fa-flip-vertical { transform: scale(1, -1); }
+
+:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-=
+flip-horizontal, :root .fa-flip-vertical { filter: none; }
+
+.fa-stack { position: relative; display: inline-block; width: 2em; height: =
+2em; line-height: 2em; vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0px; width: 100%; te=
+xt-align: center; }
+
+.fa-stack-1x { line-height: inherit; }
+
+.fa-stack-2x { font-size: 2em; }
+
+.fa-inverse { color: rgb(255, 255, 255); }
+
+.fa-glass::before { content: "=EF=80=80"; }
+
+.fa-music::before { content: "=EF=80=81"; }
+
+.fa-search::before { content: "=EF=80=82"; }
+
+.fa-envelope-o::before { content: "=EF=80=83"; }
+
+.fa-heart::before { content: "=EF=80=84"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-star-o::before { content: "=EF=80=86"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-film::before { content: "=EF=80=88"; }
+
+.fa-th-large::before { content: "=EF=80=89"; }
+
+.fa-th::before { content: "=EF=80=8A"; }
+
+.fa-th-list::before { content: "=EF=80=8B"; }
+
+.fa-check::before { content: "=EF=80=8C"; }
+
+.fa-remove::before, .fa-close::before, .fa-times::before { content: "=EF=80=
+=8D"; }
+
+.fa-search-plus::before { content: "=EF=80=8E"; }
+
+.fa-search-minus::before { content: "=EF=80=90"; }
+
+.fa-power-off::before { content: "=EF=80=91"; }
+
+.fa-signal::before { content: "=EF=80=92"; }
+
+.fa-gear::before, .fa-cog::before { content: "=EF=80=93"; }
+
+.fa-trash-o::before { content: "=EF=80=94"; }
+
+.fa-home::before { content: "=EF=80=95"; }
+
+.fa-file-o::before { content: "=EF=80=96"; }
+
+.fa-clock-o::before { content: "=EF=80=97"; }
+
+.fa-road::before { content: "=EF=80=98"; }
+
+.fa-download::before { content: "=EF=80=99"; }
+
+.fa-arrow-circle-o-down::before { content: "=EF=80=9A"; }
+
+.fa-arrow-circle-o-up::before { content: "=EF=80=9B"; }
+
+.fa-inbox::before { content: "=EF=80=9C"; }
+
+.fa-play-circle-o::before { content: "=EF=80=9D"; }
+
+.fa-rotate-right::before, .fa-repeat::before { content: "=EF=80=9E"; }
+
+.fa-refresh::before { content: "=EF=80=A1"; }
+
+.fa-list-alt::before { content: "=EF=80=A2"; }
+
+.fa-lock::before { content: "=EF=80=A3"; }
+
+.fa-flag::before { content: "=EF=80=A4"; }
+
+.fa-headphones::before { content: "=EF=80=A5"; }
+
+.fa-volume-off::before { content: "=EF=80=A6"; }
+
+.fa-volume-down::before { content: "=EF=80=A7"; }
+
+.fa-volume-up::before { content: "=EF=80=A8"; }
+
+.fa-qrcode::before { content: "=EF=80=A9"; }
+
+.fa-barcode::before { content: "=EF=80=AA"; }
+
+.fa-tag::before { content: "=EF=80=AB"; }
+
+.fa-tags::before { content: "=EF=80=AC"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-bookmark::before { content: "=EF=80=AE"; }
+
+.fa-print::before { content: "=EF=80=AF"; }
+
+.fa-camera::before { content: "=EF=80=B0"; }
+
+.fa-font::before { content: "=EF=80=B1"; }
+
+.fa-bold::before { content: "=EF=80=B2"; }
+
+.fa-italic::before { content: "=EF=80=B3"; }
+
+.fa-text-height::before { content: "=EF=80=B4"; }
+
+.fa-text-width::before { content: "=EF=80=B5"; }
+
+.fa-align-left::before { content: "=EF=80=B6"; }
+
+.fa-align-center::before { content: "=EF=80=B7"; }
+
+.fa-align-right::before { content: "=EF=80=B8"; }
+
+.fa-align-justify::before { content: "=EF=80=B9"; }
+
+.fa-list::before { content: "=EF=80=BA"; }
+
+.fa-dedent::before, .fa-outdent::before { content: "=EF=80=BB"; }
+
+.fa-indent::before { content: "=EF=80=BC"; }
+
+.fa-video-camera::before { content: "=EF=80=BD"; }
+
+.fa-photo::before, .fa-image::before, .fa-picture-o::before { content: "=EF=
+=80=BE"; }
+
+.fa-pencil::before { content: "=EF=81=80"; }
+
+.fa-map-marker::before { content: "=EF=81=81"; }
+
+.fa-adjust::before { content: "=EF=81=82"; }
+
+.fa-tint::before { content: "=EF=81=83"; }
+
+.fa-edit::before, .fa-pencil-square-o::before { content: "=EF=81=84"; }
+
+.fa-share-square-o::before { content: "=EF=81=85"; }
+
+.fa-check-square-o::before { content: "=EF=81=86"; }
+
+.fa-arrows::before { content: "=EF=81=87"; }
+
+.fa-step-backward::before { content: "=EF=81=88"; }
+
+.fa-fast-backward::before { content: "=EF=81=89"; }
+
+.fa-backward::before { content: "=EF=81=8A"; }
+
+.fa-play::before { content: "=EF=81=8B"; }
+
+.fa-pause::before { content: "=EF=81=8C"; }
+
+.fa-stop::before { content: "=EF=81=8D"; }
+
+.fa-forward::before { content: "=EF=81=8E"; }
+
+.fa-fast-forward::before { content: "=EF=81=90"; }
+
+.fa-step-forward::before { content: "=EF=81=91"; }
+
+.fa-eject::before { content: "=EF=81=92"; }
+
+.fa-chevron-left::before { content: "=EF=81=93"; }
+
+.fa-chevron-right::before { content: "=EF=81=94"; }
+
+.fa-plus-circle::before { content: "=EF=81=95"; }
+
+.fa-minus-circle::before { content: "=EF=81=96"; }
+
+.fa-times-circle::before { content: "=EF=81=97"; }
+
+.fa-check-circle::before { content: "=EF=81=98"; }
+
+.fa-question-circle::before { content: "=EF=81=99"; }
+
+.fa-info-circle::before { content: "=EF=81=9A"; }
+
+.fa-crosshairs::before { content: "=EF=81=9B"; }
+
+.fa-times-circle-o::before { content: "=EF=81=9C"; }
+
+.fa-check-circle-o::before { content: "=EF=81=9D"; }
+
+.fa-ban::before { content: "=EF=81=9E"; }
+
+.fa-arrow-left::before { content: "=EF=81=A0"; }
+
+.fa-arrow-right::before { content: "=EF=81=A1"; }
+
+.fa-arrow-up::before { content: "=EF=81=A2"; }
+
+.fa-arrow-down::before { content: "=EF=81=A3"; }
+
+.fa-mail-forward::before, .fa-share::before { content: "=EF=81=A4"; }
+
+.fa-expand::before { content: "=EF=81=A5"; }
+
+.fa-compress::before { content: "=EF=81=A6"; }
+
+.fa-plus::before { content: "=EF=81=A7"; }
+
+.fa-minus::before { content: "=EF=81=A8"; }
+
+.fa-asterisk::before { content: "=EF=81=A9"; }
+
+.fa-exclamation-circle::before { content: "=EF=81=AA"; }
+
+.fa-gift::before { content: "=EF=81=AB"; }
+
+.fa-leaf::before { content: "=EF=81=AC"; }
+
+.fa-fire::before { content: "=EF=81=AD"; }
+
+.fa-eye::before { content: "=EF=81=AE"; }
+
+.fa-eye-slash::before { content: "=EF=81=B0"; }
+
+.fa-warning::before, .fa-exclamation-triangle::before { content: "=EF=81=B1=
+"; }
+
+.fa-plane::before { content: "=EF=81=B2"; }
+
+.fa-calendar::before { content: "=EF=81=B3"; }
+
+.fa-random::before { content: "=EF=81=B4"; }
+
+.fa-comment::before { content: "=EF=81=B5"; }
+
+.fa-magnet::before { content: "=EF=81=B6"; }
+
+.fa-chevron-up::before { content: "=EF=81=B7"; }
+
+.fa-chevron-down::before { content: "=EF=81=B8"; }
+
+.fa-retweet::before { content: "=EF=81=B9"; }
+
+.fa-shopping-cart::before { content: "=EF=81=BA"; }
+
+.fa-folder::before { content: "=EF=81=BB"; }
+
+.fa-folder-open::before { content: "=EF=81=BC"; }
+
+.fa-arrows-v::before { content: "=EF=81=BD"; }
+
+.fa-arrows-h::before { content: "=EF=81=BE"; }
+
+.fa-bar-chart-o::before, .fa-bar-chart::before { content: "=EF=82=80"; }
+
+.fa-twitter-square::before { content: "=EF=82=81"; }
+
+.fa-facebook-square::before { content: "=EF=82=82"; }
+
+.fa-camera-retro::before { content: "=EF=82=83"; }
+
+.fa-key::before { content: "=EF=82=84"; }
+
+.fa-gears::before, .fa-cogs::before { content: "=EF=82=85"; }
+
+.fa-comments::before { content: "=EF=82=86"; }
+
+.fa-thumbs-o-up::before { content: "=EF=82=87"; }
+
+.fa-thumbs-o-down::before { content: "=EF=82=88"; }
+
+.fa-star-half::before { content: "=EF=82=89"; }
+
+.fa-heart-o::before { content: "=EF=82=8A"; }
+
+.fa-sign-out::before { content: "=EF=82=8B"; }
+
+.fa-linkedin-square::before { content: "=EF=82=8C"; }
+
+.fa-thumb-tack::before { content: "=EF=82=8D"; }
+
+.fa-external-link::before { content: "=EF=82=8E"; }
+
+.fa-sign-in::before { content: "=EF=82=90"; }
+
+.fa-trophy::before { content: "=EF=82=91"; }
+
+.fa-github-square::before { content: "=EF=82=92"; }
+
+.fa-upload::before { content: "=EF=82=93"; }
+
+.fa-lemon-o::before { content: "=EF=82=94"; }
+
+.fa-phone::before { content: "=EF=82=95"; }
+
+.fa-square-o::before { content: "=EF=82=96"; }
+
+.fa-bookmark-o::before { content: "=EF=82=97"; }
+
+.fa-phone-square::before { content: "=EF=82=98"; }
+
+.fa-twitter::before { content: "=EF=82=99"; }
+
+.fa-facebook-f::before, .fa-facebook::before { content: "=EF=82=9A"; }
+
+.fa-github::before { content: "=EF=82=9B"; }
+
+.fa-unlock::before { content: "=EF=82=9C"; }
+
+.fa-credit-card::before { content: "=EF=82=9D"; }
+
+.fa-feed::before, .fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-hdd-o::before { content: "=EF=82=A0"; }
+
+.fa-bullhorn::before { content: "=EF=82=A1"; }
+
+.fa-bell::before { content: "=EF=83=B3"; }
+
+.fa-certificate::before { content: "=EF=82=A3"; }
+
+.fa-hand-o-right::before { content: "=EF=82=A4"; }
+
+.fa-hand-o-left::before { content: "=EF=82=A5"; }
+
+.fa-hand-o-up::before { content: "=EF=82=A6"; }
+
+.fa-hand-o-down::before { content: "=EF=82=A7"; }
+
+.fa-arrow-circle-left::before { content: "=EF=82=A8"; }
+
+.fa-arrow-circle-right::before { content: "=EF=82=A9"; }
+
+.fa-arrow-circle-up::before { content: "=EF=82=AA"; }
+
+.fa-arrow-circle-down::before { content: "=EF=82=AB"; }
+
+.fa-globe::before { content: "=EF=82=AC"; }
+
+.fa-wrench::before { content: "=EF=82=AD"; }
+
+.fa-tasks::before { content: "=EF=82=AE"; }
+
+.fa-filter::before { content: "=EF=82=B0"; }
+
+.fa-briefcase::before { content: "=EF=82=B1"; }
+
+.fa-arrows-alt::before { content: "=EF=82=B2"; }
+
+.fa-group::before, .fa-users::before { content: "=EF=83=80"; }
+
+.fa-chain::before, .fa-link::before { content: "=EF=83=81"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-flask::before { content: "=EF=83=83"; }
+
+.fa-cut::before, .fa-scissors::before { content: "=EF=83=84"; }
+
+.fa-copy::before, .fa-files-o::before { content: "=EF=83=85"; }
+
+.fa-paperclip::before { content: "=EF=83=86"; }
+
+.fa-save::before, .fa-floppy-o::before { content: "=EF=83=87"; }
+
+.fa-square::before { content: "=EF=83=88"; }
+
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before { content: "=EF=
+=83=89"; }
+
+.fa-list-ul::before { content: "=EF=83=8A"; }
+
+.fa-list-ol::before { content: "=EF=83=8B"; }
+
+.fa-strikethrough::before { content: "=EF=83=8C"; }
+
+.fa-underline::before { content: "=EF=83=8D"; }
+
+.fa-table::before { content: "=EF=83=8E"; }
+
+.fa-magic::before { content: "=EF=83=90"; }
+
+.fa-truck::before { content: "=EF=83=91"; }
+
+.fa-pinterest::before { content: "=EF=83=92"; }
+
+.fa-pinterest-square::before { content: "=EF=83=93"; }
+
+.fa-google-plus-square::before { content: "=EF=83=94"; }
+
+.fa-google-plus::before { content: "=EF=83=95"; }
+
+.fa-money::before { content: "=EF=83=96"; }
+
+.fa-caret-down::before { content: "=EF=83=97"; }
+
+.fa-caret-up::before { content: "=EF=83=98"; }
+
+.fa-caret-left::before { content: "=EF=83=99"; }
+
+.fa-caret-right::before { content: "=EF=83=9A"; }
+
+.fa-columns::before { content: "=EF=83=9B"; }
+
+.fa-unsorted::before, .fa-sort::before { content: "=EF=83=9C"; }
+
+.fa-sort-down::before, .fa-sort-desc::before { content: "=EF=83=9D"; }
+
+.fa-sort-up::before, .fa-sort-asc::before { content: "=EF=83=9E"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-linkedin::before { content: "=EF=83=A1"; }
+
+.fa-rotate-left::before, .fa-undo::before { content: "=EF=83=A2"; }
+
+.fa-legal::before, .fa-gavel::before { content: "=EF=83=A3"; }
+
+.fa-dashboard::before, .fa-tachometer::before { content: "=EF=83=A4"; }
+
+.fa-comment-o::before { content: "=EF=83=A5"; }
+
+.fa-comments-o::before { content: "=EF=83=A6"; }
+
+.fa-flash::before, .fa-bolt::before { content: "=EF=83=A7"; }
+
+.fa-sitemap::before { content: "=EF=83=A8"; }
+
+.fa-umbrella::before { content: "=EF=83=A9"; }
+
+.fa-paste::before, .fa-clipboard::before { content: "=EF=83=AA"; }
+
+.fa-lightbulb-o::before { content: "=EF=83=AB"; }
+
+.fa-exchange::before { content: "=EF=83=AC"; }
+
+.fa-cloud-download::before { content: "=EF=83=AD"; }
+
+.fa-cloud-upload::before { content: "=EF=83=AE"; }
+
+.fa-user-md::before { content: "=EF=83=B0"; }
+
+.fa-stethoscope::before { content: "=EF=83=B1"; }
+
+.fa-suitcase::before { content: "=EF=83=B2"; }
+
+.fa-bell-o::before { content: "=EF=82=A2"; }
+
+.fa-coffee::before { content: "=EF=83=B4"; }
+
+.fa-cutlery::before { content: "=EF=83=B5"; }
+
+.fa-file-text-o::before { content: "=EF=83=B6"; }
+
+.fa-building-o::before { content: "=EF=83=B7"; }
+
+.fa-hospital-o::before { content: "=EF=83=B8"; }
+
+.fa-ambulance::before { content: "=EF=83=B9"; }
+
+.fa-medkit::before { content: "=EF=83=BA"; }
+
+.fa-fighter-jet::before { content: "=EF=83=BB"; }
+
+.fa-beer::before { content: "=EF=83=BC"; }
+
+.fa-h-square::before { content: "=EF=83=BD"; }
+
+.fa-plus-square::before { content: "=EF=83=BE"; }
+
+.fa-angle-double-left::before { content: "=EF=84=80"; }
+
+.fa-angle-double-right::before { content: "=EF=84=81"; }
+
+.fa-angle-double-up::before { content: "=EF=84=82"; }
+
+.fa-angle-double-down::before { content: "=EF=84=83"; }
+
+.fa-angle-left::before { content: "=EF=84=84"; }
+
+.fa-angle-right::before { content: "=EF=84=85"; }
+
+.fa-angle-up::before { content: "=EF=84=86"; }
+
+.fa-angle-down::before { content: "=EF=84=87"; }
+
+.fa-desktop::before { content: "=EF=84=88"; }
+
+.fa-laptop::before { content: "=EF=84=89"; }
+
+.fa-tablet::before { content: "=EF=84=8A"; }
+
+.fa-mobile-phone::before, .fa-mobile::before { content: "=EF=84=8B"; }
+
+.fa-circle-o::before { content: "=EF=84=8C"; }
+
+.fa-quote-left::before { content: "=EF=84=8D"; }
+
+.fa-quote-right::before { content: "=EF=84=8E"; }
+
+.fa-spinner::before { content: "=EF=84=90"; }
+
+.fa-circle::before { content: "=EF=84=91"; }
+
+.fa-mail-reply::before, .fa-reply::before { content: "=EF=84=92"; }
+
+.fa-github-alt::before { content: "=EF=84=93"; }
+
+.fa-folder-o::before { content: "=EF=84=94"; }
+
+.fa-folder-open-o::before { content: "=EF=84=95"; }
+
+.fa-smile-o::before { content: "=EF=84=98"; }
+
+.fa-frown-o::before { content: "=EF=84=99"; }
+
+.fa-meh-o::before { content: "=EF=84=9A"; }
+
+.fa-gamepad::before { content: "=EF=84=9B"; }
+
+.fa-keyboard-o::before { content: "=EF=84=9C"; }
+
+.fa-flag-o::before { content: "=EF=84=9D"; }
+
+.fa-flag-checkered::before { content: "=EF=84=9E"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-mail-reply-all::before, .fa-reply-all::before { content: "=EF=84=A2"; }
+
+.fa-star-half-empty::before, .fa-star-half-full::before, .fa-star-half-o::b=
+efore { content: "=EF=84=A3"; }
+
+.fa-location-arrow::before { content: "=EF=84=A4"; }
+
+.fa-crop::before { content: "=EF=84=A5"; }
+
+.fa-code-fork::before { content: "=EF=84=A6"; }
+
+.fa-unlink::before, .fa-chain-broken::before { content: "=EF=84=A7"; }
+
+.fa-question::before { content: "=EF=84=A8"; }
+
+.fa-info::before { content: "=EF=84=A9"; }
+
+.fa-exclamation::before { content: "=EF=84=AA"; }
+
+.fa-superscript::before { content: "=EF=84=AB"; }
+
+.fa-subscript::before { content: "=EF=84=AC"; }
+
+.fa-eraser::before { content: "=EF=84=AD"; }
+
+.fa-puzzle-piece::before { content: "=EF=84=AE"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-microphone-slash::before { content: "=EF=84=B1"; }
+
+.fa-shield::before { content: "=EF=84=B2"; }
+
+.fa-calendar-o::before { content: "=EF=84=B3"; }
+
+.fa-fire-extinguisher::before { content: "=EF=84=B4"; }
+
+.fa-rocket::before { content: "=EF=84=B5"; }
+
+.fa-maxcdn::before { content: "=EF=84=B6"; }
+
+.fa-chevron-circle-left::before { content: "=EF=84=B7"; }
+
+.fa-chevron-circle-right::before { content: "=EF=84=B8"; }
+
+.fa-chevron-circle-up::before { content: "=EF=84=B9"; }
+
+.fa-chevron-circle-down::before { content: "=EF=84=BA"; }
+
+.fa-html5::before { content: "=EF=84=BB"; }
+
+.fa-css3::before { content: "=EF=84=BC"; }
+
+.fa-anchor::before { content: "=EF=84=BD"; }
+
+.fa-unlock-alt::before { content: "=EF=84=BE"; }
+
+.fa-bullseye::before { content: "=EF=85=80"; }
+
+.fa-ellipsis-h::before { content: "=EF=85=81"; }
+
+.fa-ellipsis-v::before { content: "=EF=85=82"; }
+
+.fa-rss-square::before { content: "=EF=85=83"; }
+
+.fa-play-circle::before { content: "=EF=85=84"; }
+
+.fa-ticket::before { content: "=EF=85=85"; }
+
+.fa-minus-square::before { content: "=EF=85=86"; }
+
+.fa-minus-square-o::before { content: "=EF=85=87"; }
+
+.fa-level-up::before { content: "=EF=85=88"; }
+
+.fa-level-down::before { content: "=EF=85=89"; }
+
+.fa-check-square::before { content: "=EF=85=8A"; }
+
+.fa-pencil-square::before { content: "=EF=85=8B"; }
+
+.fa-external-link-square::before { content: "=EF=85=8C"; }
+
+.fa-share-square::before { content: "=EF=85=8D"; }
+
+.fa-compass::before { content: "=EF=85=8E"; }
+
+.fa-toggle-down::before, .fa-caret-square-o-down::before { content: "=EF=85=
+=90"; }
+
+.fa-toggle-up::before, .fa-caret-square-o-up::before { content: "=EF=85=91"=
+; }
+
+.fa-toggle-right::before, .fa-caret-square-o-right::before { content: "=EF=
+=85=92"; }
+
+.fa-euro::before, .fa-eur::before { content: "=EF=85=93"; }
+
+.fa-gbp::before { content: "=EF=85=94"; }
+
+.fa-dollar::before, .fa-usd::before { content: "=EF=85=95"; }
+
+.fa-rupee::before, .fa-inr::before { content: "=EF=85=96"; }
+
+.fa-cny::before, .fa-rmb::before, .fa-yen::before, .fa-jpy::before { conten=
+t: "=EF=85=97"; }
+
+.fa-ruble::before, .fa-rouble::before, .fa-rub::before { content: "=EF=85=
+=98"; }
+
+.fa-won::before, .fa-krw::before { content: "=EF=85=99"; }
+
+.fa-bitcoin::before, .fa-btc::before { content: "=EF=85=9A"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-file-text::before { content: "=EF=85=9C"; }
+
+.fa-sort-alpha-asc::before { content: "=EF=85=9D"; }
+
+.fa-sort-alpha-desc::before { content: "=EF=85=9E"; }
+
+.fa-sort-amount-asc::before { content: "=EF=85=A0"; }
+
+.fa-sort-amount-desc::before { content: "=EF=85=A1"; }
+
+.fa-sort-numeric-asc::before { content: "=EF=85=A2"; }
+
+.fa-sort-numeric-desc::before { content: "=EF=85=A3"; }
+
+.fa-thumbs-up::before { content: "=EF=85=A4"; }
+
+.fa-thumbs-down::before { content: "=EF=85=A5"; }
+
+.fa-youtube-square::before { content: "=EF=85=A6"; }
+
+.fa-youtube::before { content: "=EF=85=A7"; }
+
+.fa-xing::before { content: "=EF=85=A8"; }
+
+.fa-xing-square::before { content: "=EF=85=A9"; }
+
+.fa-youtube-play::before { content: "=EF=85=AA"; }
+
+.fa-dropbox::before { content: "=EF=85=AB"; }
+
+.fa-stack-overflow::before { content: "=EF=85=AC"; }
+
+.fa-instagram::before { content: "=EF=85=AD"; }
+
+.fa-flickr::before { content: "=EF=85=AE"; }
+
+.fa-adn::before { content: "=EF=85=B0"; }
+
+.fa-bitbucket::before { content: "=EF=85=B1"; }
+
+.fa-bitbucket-square::before { content: "=EF=85=B2"; }
+
+.fa-tumblr::before { content: "=EF=85=B3"; }
+
+.fa-tumblr-square::before { content: "=EF=85=B4"; }
+
+.fa-long-arrow-down::before { content: "=EF=85=B5"; }
+
+.fa-long-arrow-up::before { content: "=EF=85=B6"; }
+
+.fa-long-arrow-left::before { content: "=EF=85=B7"; }
+
+.fa-long-arrow-right::before { content: "=EF=85=B8"; }
+
+.fa-apple::before { content: "=EF=85=B9"; }
+
+.fa-windows::before { content: "=EF=85=BA"; }
+
+.fa-android::before { content: "=EF=85=BB"; }
+
+.fa-linux::before { content: "=EF=85=BC"; }
+
+.fa-dribbble::before { content: "=EF=85=BD"; }
+
+.fa-skype::before { content: "=EF=85=BE"; }
+
+.fa-foursquare::before { content: "=EF=86=80"; }
+
+.fa-trello::before { content: "=EF=86=81"; }
+
+.fa-female::before { content: "=EF=86=82"; }
+
+.fa-male::before { content: "=EF=86=83"; }
+
+.fa-gittip::before, .fa-gratipay::before { content: "=EF=86=84"; }
+
+.fa-sun-o::before { content: "=EF=86=85"; }
+
+.fa-moon-o::before { content: "=EF=86=86"; }
+
+.fa-archive::before { content: "=EF=86=87"; }
+
+.fa-bug::before { content: "=EF=86=88"; }
+
+.fa-vk::before { content: "=EF=86=89"; }
+
+.fa-weibo::before { content: "=EF=86=8A"; }
+
+.fa-renren::before { content: "=EF=86=8B"; }
+
+.fa-pagelines::before { content: "=EF=86=8C"; }
+
+.fa-stack-exchange::before { content: "=EF=86=8D"; }
+
+.fa-arrow-circle-o-right::before { content: "=EF=86=8E"; }
+
+.fa-arrow-circle-o-left::before { content: "=EF=86=90"; }
+
+.fa-toggle-left::before, .fa-caret-square-o-left::before { content: "=EF=86=
+=91"; }
+
+.fa-dot-circle-o::before { content: "=EF=86=92"; }
+
+.fa-wheelchair::before { content: "=EF=86=93"; }
+
+.fa-vimeo-square::before { content: "=EF=86=94"; }
+
+.fa-turkish-lira::before, .fa-try::before { content: "=EF=86=95"; }
+
+.fa-plus-square-o::before { content: "=EF=86=96"; }
+
+.fa-space-shuttle::before { content: "=EF=86=97"; }
+
+.fa-slack::before { content: "=EF=86=98"; }
+
+.fa-envelope-square::before { content: "=EF=86=99"; }
+
+.fa-wordpress::before { content: "=EF=86=9A"; }
+
+.fa-openid::before { content: "=EF=86=9B"; }
+
+.fa-institution::before, .fa-bank::before, .fa-university::before { content=
+: "=EF=86=9C"; }
+
+.fa-mortar-board::before, .fa-graduation-cap::before { content: "=EF=86=9D"=
+; }
+
+.fa-yahoo::before { content: "=EF=86=9E"; }
+
+.fa-google::before { content: "=EF=86=A0"; }
+
+.fa-reddit::before { content: "=EF=86=A1"; }
+
+.fa-reddit-square::before { content: "=EF=86=A2"; }
+
+.fa-stumbleupon-circle::before { content: "=EF=86=A3"; }
+
+.fa-stumbleupon::before { content: "=EF=86=A4"; }
+
+.fa-delicious::before { content: "=EF=86=A5"; }
+
+.fa-digg::before { content: "=EF=86=A6"; }
+
+.fa-pied-piper-pp::before { content: "=EF=86=A7"; }
+
+.fa-pied-piper-alt::before { content: "=EF=86=A8"; }
+
+.fa-drupal::before { content: "=EF=86=A9"; }
+
+.fa-joomla::before { content: "=EF=86=AA"; }
+
+.fa-language::before { content: "=EF=86=AB"; }
+
+.fa-fax::before { content: "=EF=86=AC"; }
+
+.fa-building::before { content: "=EF=86=AD"; }
+
+.fa-child::before { content: "=EF=86=AE"; }
+
+.fa-paw::before { content: "=EF=86=B0"; }
+
+.fa-spoon::before { content: "=EF=86=B1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-cubes::before { content: "=EF=86=B3"; }
+
+.fa-behance::before { content: "=EF=86=B4"; }
+
+.fa-behance-square::before { content: "=EF=86=B5"; }
+
+.fa-steam::before { content: "=EF=86=B6"; }
+
+.fa-steam-square::before { content: "=EF=86=B7"; }
+
+.fa-recycle::before { content: "=EF=86=B8"; }
+
+.fa-automobile::before, .fa-car::before { content: "=EF=86=B9"; }
+
+.fa-cab::before, .fa-taxi::before { content: "=EF=86=BA"; }
+
+.fa-tree::before { content: "=EF=86=BB"; }
+
+.fa-spotify::before { content: "=EF=86=BC"; }
+
+.fa-deviantart::before { content: "=EF=86=BD"; }
+
+.fa-soundcloud::before { content: "=EF=86=BE"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-file-pdf-o::before { content: "=EF=87=81"; }
+
+.fa-file-word-o::before { content: "=EF=87=82"; }
+
+.fa-file-excel-o::before { content: "=EF=87=83"; }
+
+.fa-file-powerpoint-o::before { content: "=EF=87=84"; }
+
+.fa-file-photo-o::before, .fa-file-picture-o::before, .fa-file-image-o::bef=
+ore { content: "=EF=87=85"; }
+
+.fa-file-zip-o::before, .fa-file-archive-o::before { content: "=EF=87=86"; =
+}
+
+.fa-file-sound-o::before, .fa-file-audio-o::before { content: "=EF=87=87"; =
+}
+
+.fa-file-movie-o::before, .fa-file-video-o::before { content: "=EF=87=88"; =
+}
+
+.fa-file-code-o::before { content: "=EF=87=89"; }
+
+.fa-vine::before { content: "=EF=87=8A"; }
+
+.fa-codepen::before { content: "=EF=87=8B"; }
+
+.fa-jsfiddle::before { content: "=EF=87=8C"; }
+
+.fa-life-bouy::before, .fa-life-buoy::before, .fa-life-saver::before, .fa-s=
+upport::before, .fa-life-ring::before { content: "=EF=87=8D"; }
+
+.fa-circle-o-notch::before { content: "=EF=87=8E"; }
+
+.fa-ra::before, .fa-resistance::before, .fa-rebel::before { content: "=EF=
+=87=90"; }
+
+.fa-ge::before, .fa-empire::before { content: "=EF=87=91"; }
+
+.fa-git-square::before { content: "=EF=87=92"; }
+
+.fa-git::before { content: "=EF=87=93"; }
+
+.fa-y-combinator-square::before, .fa-yc-square::before, .fa-hacker-news::be=
+fore { content: "=EF=87=94"; }
+
+.fa-tencent-weibo::before { content: "=EF=87=95"; }
+
+.fa-qq::before { content: "=EF=87=96"; }
+
+.fa-wechat::before, .fa-weixin::before { content: "=EF=87=97"; }
+
+.fa-send::before, .fa-paper-plane::before { content: "=EF=87=98"; }
+
+.fa-send-o::before, .fa-paper-plane-o::before { content: "=EF=87=99"; }
+
+.fa-history::before { content: "=EF=87=9A"; }
+
+.fa-circle-thin::before { content: "=EF=87=9B"; }
+
+.fa-header::before { content: "=EF=87=9C"; }
+
+.fa-paragraph::before { content: "=EF=87=9D"; }
+
+.fa-sliders::before { content: "=EF=87=9E"; }
+
+.fa-share-alt::before { content: "=EF=87=A0"; }
+
+.fa-share-alt-square::before { content: "=EF=87=A1"; }
+
+.fa-bomb::before { content: "=EF=87=A2"; }
+
+.fa-soccer-ball-o::before, .fa-futbol-o::before { content: "=EF=87=A3"; }
+
+.fa-tty::before { content: "=EF=87=A4"; }
+
+.fa-binoculars::before { content: "=EF=87=A5"; }
+
+.fa-plug::before { content: "=EF=87=A6"; }
+
+.fa-slideshare::before { content: "=EF=87=A7"; }
+
+.fa-twitch::before { content: "=EF=87=A8"; }
+
+.fa-yelp::before { content: "=EF=87=A9"; }
+
+.fa-newspaper-o::before { content: "=EF=87=AA"; }
+
+.fa-wifi::before { content: "=EF=87=AB"; }
+
+.fa-calculator::before { content: "=EF=87=AC"; }
+
+.fa-paypal::before { content: "=EF=87=AD"; }
+
+.fa-google-wallet::before { content: "=EF=87=AE"; }
+
+.fa-cc-visa::before { content: "=EF=87=B0"; }
+
+.fa-cc-mastercard::before { content: "=EF=87=B1"; }
+
+.fa-cc-discover::before { content: "=EF=87=B2"; }
+
+.fa-cc-amex::before { content: "=EF=87=B3"; }
+
+.fa-cc-paypal::before { content: "=EF=87=B4"; }
+
+.fa-cc-stripe::before { content: "=EF=87=B5"; }
+
+.fa-bell-slash::before { content: "=EF=87=B6"; }
+
+.fa-bell-slash-o::before { content: "=EF=87=B7"; }
+
+.fa-trash::before { content: "=EF=87=B8"; }
+
+.fa-copyright::before { content: "=EF=87=B9"; }
+
+.fa-at::before { content: "=EF=87=BA"; }
+
+.fa-eyedropper::before { content: "=EF=87=BB"; }
+
+.fa-paint-brush::before { content: "=EF=87=BC"; }
+
+.fa-birthday-cake::before { content: "=EF=87=BD"; }
+
+.fa-area-chart::before { content: "=EF=87=BE"; }
+
+.fa-pie-chart::before { content: "=EF=88=80"; }
+
+.fa-line-chart::before { content: "=EF=88=81"; }
+
+.fa-lastfm::before { content: "=EF=88=82"; }
+
+.fa-lastfm-square::before { content: "=EF=88=83"; }
+
+.fa-toggle-off::before { content: "=EF=88=84"; }
+
+.fa-toggle-on::before { content: "=EF=88=85"; }
+
+.fa-bicycle::before { content: "=EF=88=86"; }
+
+.fa-bus::before { content: "=EF=88=87"; }
+
+.fa-ioxhost::before { content: "=EF=88=88"; }
+
+.fa-angellist::before { content: "=EF=88=89"; }
+
+.fa-cc::before { content: "=EF=88=8A"; }
+
+.fa-shekel::before, .fa-sheqel::before, .fa-ils::before { content: "=EF=88=
+=8B"; }
+
+.fa-meanpath::before { content: "=EF=88=8C"; }
+
+.fa-buysellads::before { content: "=EF=88=8D"; }
+
+.fa-connectdevelop::before { content: "=EF=88=8E"; }
+
+.fa-dashcube::before { content: "=EF=88=90"; }
+
+.fa-forumbee::before { content: "=EF=88=91"; }
+
+.fa-leanpub::before { content: "=EF=88=92"; }
+
+.fa-sellsy::before { content: "=EF=88=93"; }
+
+.fa-shirtsinbulk::before { content: "=EF=88=94"; }
+
+.fa-simplybuilt::before { content: "=EF=88=95"; }
+
+.fa-skyatlas::before { content: "=EF=88=96"; }
+
+.fa-cart-plus::before { content: "=EF=88=97"; }
+
+.fa-cart-arrow-down::before { content: "=EF=88=98"; }
+
+.fa-diamond::before { content: "=EF=88=99"; }
+
+.fa-ship::before { content: "=EF=88=9A"; }
+
+.fa-user-secret::before { content: "=EF=88=9B"; }
+
+.fa-motorcycle::before { content: "=EF=88=9C"; }
+
+.fa-street-view::before { content: "=EF=88=9D"; }
+
+.fa-heartbeat::before { content: "=EF=88=9E"; }
+
+.fa-venus::before { content: "=EF=88=A1"; }
+
+.fa-mars::before { content: "=EF=88=A2"; }
+
+.fa-mercury::before { content: "=EF=88=A3"; }
+
+.fa-intersex::before, .fa-transgender::before { content: "=EF=88=A4"; }
+
+.fa-transgender-alt::before { content: "=EF=88=A5"; }
+
+.fa-venus-double::before { content: "=EF=88=A6"; }
+
+.fa-mars-double::before { content: "=EF=88=A7"; }
+
+.fa-venus-mars::before { content: "=EF=88=A8"; }
+
+.fa-mars-stroke::before { content: "=EF=88=A9"; }
+
+.fa-mars-stroke-v::before { content: "=EF=88=AA"; }
+
+.fa-mars-stroke-h::before { content: "=EF=88=AB"; }
+
+.fa-neuter::before { content: "=EF=88=AC"; }
+
+.fa-genderless::before { content: "=EF=88=AD"; }
+
+.fa-facebook-official::before { content: "=EF=88=B0"; }
+
+.fa-pinterest-p::before { content: "=EF=88=B1"; }
+
+.fa-whatsapp::before { content: "=EF=88=B2"; }
+
+.fa-server::before { content: "=EF=88=B3"; }
+
+.fa-user-plus::before { content: "=EF=88=B4"; }
+
+.fa-user-times::before { content: "=EF=88=B5"; }
+
+.fa-hotel::before, .fa-bed::before { content: "=EF=88=B6"; }
+
+.fa-viacoin::before { content: "=EF=88=B7"; }
+
+.fa-train::before { content: "=EF=88=B8"; }
+
+.fa-subway::before { content: "=EF=88=B9"; }
+
+.fa-medium::before { content: "=EF=88=BA"; }
+
+.fa-yc::before, .fa-y-combinator::before { content: "=EF=88=BB"; }
+
+.fa-optin-monster::before { content: "=EF=88=BC"; }
+
+.fa-opencart::before { content: "=EF=88=BD"; }
+
+.fa-expeditedssl::before { content: "=EF=88=BE"; }
+
+.fa-battery-4::before, .fa-battery::before, .fa-battery-full::before { cont=
+ent: "=EF=89=80"; }
+
+.fa-battery-3::before, .fa-battery-three-quarters::before { content: "=EF=
+=89=81"; }
+
+.fa-battery-2::before, .fa-battery-half::before { content: "=EF=89=82"; }
+
+.fa-battery-1::before, .fa-battery-quarter::before { content: "=EF=89=83"; =
+}
+
+.fa-battery-0::before, .fa-battery-empty::before { content: "=EF=89=84"; }
+
+.fa-mouse-pointer::before { content: "=EF=89=85"; }
+
+.fa-i-cursor::before { content: "=EF=89=86"; }
+
+.fa-object-group::before { content: "=EF=89=87"; }
+
+.fa-object-ungroup::before { content: "=EF=89=88"; }
+
+.fa-sticky-note::before { content: "=EF=89=89"; }
+
+.fa-sticky-note-o::before { content: "=EF=89=8A"; }
+
+.fa-cc-jcb::before { content: "=EF=89=8B"; }
+
+.fa-cc-diners-club::before { content: "=EF=89=8C"; }
+
+.fa-clone::before { content: "=EF=89=8D"; }
+
+.fa-balance-scale::before { content: "=EF=89=8E"; }
+
+.fa-hourglass-o::before { content: "=EF=89=90"; }
+
+.fa-hourglass-1::before, .fa-hourglass-start::before { content: "=EF=89=91"=
+; }
+
+.fa-hourglass-2::before, .fa-hourglass-half::before { content: "=EF=89=92";=
+ }
+
+.fa-hourglass-3::before, .fa-hourglass-end::before { content: "=EF=89=93"; =
+}
+
+.fa-hourglass::before { content: "=EF=89=94"; }
+
+.fa-hand-grab-o::before, .fa-hand-rock-o::before { content: "=EF=89=95"; }
+
+.fa-hand-stop-o::before, .fa-hand-paper-o::before { content: "=EF=89=96"; }
+
+.fa-hand-scissors-o::before { content: "=EF=89=97"; }
+
+.fa-hand-lizard-o::before { content: "=EF=89=98"; }
+
+.fa-hand-spock-o::before { content: "=EF=89=99"; }
+
+.fa-hand-pointer-o::before { content: "=EF=89=9A"; }
+
+.fa-hand-peace-o::before { content: "=EF=89=9B"; }
+
+.fa-trademark::before { content: "=EF=89=9C"; }
+
+.fa-registered::before { content: "=EF=89=9D"; }
+
+.fa-creative-commons::before { content: "=EF=89=9E"; }
+
+.fa-gg::before { content: "=EF=89=A0"; }
+
+.fa-gg-circle::before { content: "=EF=89=A1"; }
+
+.fa-tripadvisor::before { content: "=EF=89=A2"; }
+
+.fa-odnoklassniki::before { content: "=EF=89=A3"; }
+
+.fa-odnoklassniki-square::before { content: "=EF=89=A4"; }
+
+.fa-get-pocket::before { content: "=EF=89=A5"; }
+
+.fa-wikipedia-w::before { content: "=EF=89=A6"; }
+
+.fa-safari::before { content: "=EF=89=A7"; }
+
+.fa-chrome::before { content: "=EF=89=A8"; }
+
+.fa-firefox::before { content: "=EF=89=A9"; }
+
+.fa-opera::before { content: "=EF=89=AA"; }
+
+.fa-internet-explorer::before { content: "=EF=89=AB"; }
+
+.fa-tv::before, .fa-television::before { content: "=EF=89=AC"; }
+
+.fa-contao::before { content: "=EF=89=AD"; }
+
+.fa-500px::before { content: "=EF=89=AE"; }
+
+.fa-amazon::before { content: "=EF=89=B0"; }
+
+.fa-calendar-plus-o::before { content: "=EF=89=B1"; }
+
+.fa-calendar-minus-o::before { content: "=EF=89=B2"; }
+
+.fa-calendar-times-o::before { content: "=EF=89=B3"; }
+
+.fa-calendar-check-o::before { content: "=EF=89=B4"; }
+
+.fa-industry::before { content: "=EF=89=B5"; }
+
+.fa-map-pin::before { content: "=EF=89=B6"; }
+
+.fa-map-signs::before { content: "=EF=89=B7"; }
+
+.fa-map-o::before { content: "=EF=89=B8"; }
+
+.fa-map::before { content: "=EF=89=B9"; }
+
+.fa-commenting::before { content: "=EF=89=BA"; }
+
+.fa-commenting-o::before { content: "=EF=89=BB"; }
+
+.fa-houzz::before { content: "=EF=89=BC"; }
+
+.fa-vimeo::before { content: "=EF=89=BD"; }
+
+.fa-black-tie::before { content: "=EF=89=BE"; }
+
+.fa-fonticons::before { content: "=EF=8A=80"; }
+
+.fa-reddit-alien::before { content: "=EF=8A=81"; }
+
+.fa-edge::before { content: "=EF=8A=82"; }
+
+.fa-credit-card-alt::before { content: "=EF=8A=83"; }
+
+.fa-codiepie::before { content: "=EF=8A=84"; }
+
+.fa-modx::before { content: "=EF=8A=85"; }
+
+.fa-fort-awesome::before { content: "=EF=8A=86"; }
+
+.fa-usb::before { content: "=EF=8A=87"; }
+
+.fa-product-hunt::before { content: "=EF=8A=88"; }
+
+.fa-mixcloud::before { content: "=EF=8A=89"; }
+
+.fa-scribd::before { content: "=EF=8A=8A"; }
+
+.fa-pause-circle::before { content: "=EF=8A=8B"; }
+
+.fa-pause-circle-o::before { content: "=EF=8A=8C"; }
+
+.fa-stop-circle::before { content: "=EF=8A=8D"; }
+
+.fa-stop-circle-o::before { content: "=EF=8A=8E"; }
+
+.fa-shopping-bag::before { content: "=EF=8A=90"; }
+
+.fa-shopping-basket::before { content: "=EF=8A=91"; }
+
+.fa-hashtag::before { content: "=EF=8A=92"; }
+
+.fa-bluetooth::before { content: "=EF=8A=93"; }
+
+.fa-bluetooth-b::before { content: "=EF=8A=94"; }
+
+.fa-percent::before { content: "=EF=8A=95"; }
+
+.fa-gitlab::before { content: "=EF=8A=96"; }
+
+.fa-wpbeginner::before { content: "=EF=8A=97"; }
+
+.fa-wpforms::before { content: "=EF=8A=98"; }
+
+.fa-envira::before { content: "=EF=8A=99"; }
+
+.fa-universal-access::before { content: "=EF=8A=9A"; }
+
+.fa-wheelchair-alt::before { content: "=EF=8A=9B"; }
+
+.fa-question-circle-o::before { content: "=EF=8A=9C"; }
+
+.fa-blind::before { content: "=EF=8A=9D"; }
+
+.fa-audio-description::before { content: "=EF=8A=9E"; }
+
+.fa-volume-control-phone::before { content: "=EF=8A=A0"; }
+
+.fa-braille::before { content: "=EF=8A=A1"; }
+
+.fa-assistive-listening-systems::before { content: "=EF=8A=A2"; }
+
+.fa-asl-interpreting::before, .fa-american-sign-language-interpreting::befo=
+re { content: "=EF=8A=A3"; }
+
+.fa-deafness::before, .fa-hard-of-hearing::before, .fa-deaf::before { conte=
+nt: "=EF=8A=A4"; }
+
+.fa-glide::before { content: "=EF=8A=A5"; }
+
+.fa-glide-g::before { content: "=EF=8A=A6"; }
+
+.fa-signing::before, .fa-sign-language::before { content: "=EF=8A=A7"; }
+
+.fa-low-vision::before { content: "=EF=8A=A8"; }
+
+.fa-viadeo::before { content: "=EF=8A=A9"; }
+
+.fa-viadeo-square::before { content: "=EF=8A=AA"; }
+
+.fa-snapchat::before { content: "=EF=8A=AB"; }
+
+.fa-snapchat-ghost::before { content: "=EF=8A=AC"; }
+
+.fa-snapchat-square::before { content: "=EF=8A=AD"; }
+
+.fa-pied-piper::before { content: "=EF=8A=AE"; }
+
+.fa-first-order::before { content: "=EF=8A=B0"; }
+
+.fa-yoast::before { content: "=EF=8A=B1"; }
+
+.fa-themeisle::before { content: "=EF=8A=B2"; }
+
+.fa-google-plus-circle::before, .fa-google-plus-official::before { content:=
+ "=EF=8A=B3"; }
+
+.fa-fa::before, .fa-font-awesome::before { content: "=EF=8A=B4"; }
+
+.fa-handshake-o::before { content: "=EF=8A=B5"; }
+
+.fa-envelope-open::before { content: "=EF=8A=B6"; }
+
+.fa-envelope-open-o::before { content: "=EF=8A=B7"; }
+
+.fa-linode::before { content: "=EF=8A=B8"; }
+
+.fa-address-book::before { content: "=EF=8A=B9"; }
+
+.fa-address-book-o::before { content: "=EF=8A=BA"; }
+
+.fa-vcard::before, .fa-address-card::before { content: "=EF=8A=BB"; }
+
+.fa-vcard-o::before, .fa-address-card-o::before { content: "=EF=8A=BC"; }
+
+.fa-user-circle::before { content: "=EF=8A=BD"; }
+
+.fa-user-circle-o::before { content: "=EF=8A=BE"; }
+
+.fa-user-o::before { content: "=EF=8B=80"; }
+
+.fa-id-badge::before { content: "=EF=8B=81"; }
+
+.fa-drivers-license::before, .fa-id-card::before { content: "=EF=8B=82"; }
+
+.fa-drivers-license-o::before, .fa-id-card-o::before { content: "=EF=8B=83"=
+; }
+
+.fa-quora::before { content: "=EF=8B=84"; }
+
+.fa-free-code-camp::before { content: "=EF=8B=85"; }
+
+.fa-telegram::before { content: "=EF=8B=86"; }
+
+.fa-thermometer-4::before, .fa-thermometer::before, .fa-thermometer-full::b=
+efore { content: "=EF=8B=87"; }
+
+.fa-thermometer-3::before, .fa-thermometer-three-quarters::before { content=
+: "=EF=8B=88"; }
+
+.fa-thermometer-2::before, .fa-thermometer-half::before { content: "=EF=8B=
+=89"; }
+
+.fa-thermometer-1::before, .fa-thermometer-quarter::before { content: "=EF=
+=8B=8A"; }
+
+.fa-thermometer-0::before, .fa-thermometer-empty::before { content: "=EF=8B=
+=8B"; }
+
+.fa-shower::before { content: "=EF=8B=8C"; }
+
+.fa-bathtub::before, .fa-s15::before, .fa-bath::before { content: "=EF=8B=
+=8D"; }
+
+.fa-podcast::before { content: "=EF=8B=8E"; }
+
+.fa-window-maximize::before { content: "=EF=8B=90"; }
+
+.fa-window-minimize::before { content: "=EF=8B=91"; }
+
+.fa-window-restore::before { content: "=EF=8B=92"; }
+
+.fa-times-rectangle::before, .fa-window-close::before { content: "=EF=8B=93=
+"; }
+
+.fa-times-rectangle-o::before, .fa-window-close-o::before { content: "=EF=
+=8B=94"; }
+
+.fa-bandcamp::before { content: "=EF=8B=95"; }
+
+.fa-grav::before { content: "=EF=8B=96"; }
+
+.fa-etsy::before { content: "=EF=8B=97"; }
+
+.fa-imdb::before { content: "=EF=8B=98"; }
+
+.fa-ravelry::before { content: "=EF=8B=99"; }
+
+.fa-eercast::before { content: "=EF=8B=9A"; }
+
+.fa-microchip::before { content: "=EF=8B=9B"; }
+
+.fa-snowflake-o::before { content: "=EF=8B=9C"; }
+
+.fa-superpowers::before { content: "=EF=8B=9D"; }
+
+.fa-wpexplorer::before { content: "=EF=8B=9E"; }
+
+.fa-meetup::before { content: "=EF=8B=A0"; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margi=
+n: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); border: 0px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus { position: static; wid=
+th: auto; height: auto; margin: 0px; overflow: visible; clip: auto; }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/fonts/fonts.css
+
+@charset "utf-8";
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300=
+; src: local("Open Sans Light"), local("OpenSans-Light"), url("/web/2022093=
+0035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17-all-charse=
+ts-300.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 300=
+; src: local("Open Sans Light Italic"), local("OpenSans-LightItalic"), url(=
+"/web/20220930035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v=
+17-all-charsets-300italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; src: local("Open Sans Regular"), local("OpenSans-Regular"), url("/web/202=
+20930035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17-all-ch=
+arsets-regular.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; src: local("Open Sans Italic"), local("OpenSans-Italic"), url("/web/20220=
+930035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17-all-char=
+sets-italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 600=
+; src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("/web/2=
+0220930035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17-all-=
+charsets-600.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 600=
+; src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic")=
+, url("/web/20220930035911im_/https://summit.ivanvelickovic.com/fonts/open-=
+sans-v17-all-charsets-600italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; src: local("Open Sans Bold"), local("OpenSans-Bold"), url("/web/202209300=
+35911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17-all-charsets=
+-700.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("/=
+web/20220930035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17=
+-all-charsets-700italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 800=
+; src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("/web=
+/20220930035911im_/https://summit.ivanvelickovic.com/fonts/open-sans-v17-al=
+l-charsets-800.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 800=
+; src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic=
+"), url("/web/20220930035911im_/https://summit.ivanvelickovic.com/fonts/ope=
+n-sans-v17-all-charsets-800italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 500; src: url("/web/20220930035911im_/https://summit.ivanvelickovic.com/=
+fonts/source-code-pro-v11-all-charsets-500.woff2") format("woff2"); }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://web.archive.org/web/20220930035909cs_/https://summit.ivanvelickovic.com/highlight.css
+
+@charset "utf-8";
+
+.hljs-comment, .hljs-quote { color: rgb(87, 87, 87); }
+
+.hljs-variable, .hljs-template-variable, .hljs-attribute, .hljs-tag, .hljs-=
+name, .hljs-regexp, .hljs-link, .hljs-name, .hljs-selector-id, .hljs-select=
+or-class { color: rgb(215, 0, 37); }
+
+.hljs-number, .hljs-meta, .hljs-built_in, .hljs-builtin-name, .hljs-literal=
+, .hljs-type, .hljs-params { color: rgb(178, 30, 0); }
+
+.hljs-string, .hljs-symbol, .hljs-bullet { color: rgb(0, 130, 0); }
+
+.hljs-title, .hljs-section { color: rgb(0, 48, 242); }
+
+.hljs-keyword, .hljs-selector-tag { color: rgb(157, 0, 236); }
+
+.hljs { display: block; overflow-x: auto; background: rgb(246, 247, 246); c=
+olor: rgb(0, 0, 0); }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: bold; }
+
+.hljs-addition { color: rgb(34, 134, 58); background-color: rgb(240, 255, 2=
+44); }
+
+.hljs-deletion { color: rgb(179, 29, 40); background-color: rgb(255, 238, 2=
+40); }
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://web.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png
+
+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
+
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://web.archive.org/_static/images/toolbar/wm_tb_prv_off.png
+
+iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAMVJREFUeNqU078KQVEcwHH/kkwWJU9ABik2M4skryApdhlYSSYjSVkt
+XoA3MBg9gMXAZlDC99TvDNTl/H71WW59b797Ttc/W6x8ysmhE1AEcUyxRyXkEITRRB8Jefb8F5Yx
+kvU+xitMSVDzeuN3GMMAbUR+rWLDoHyHiZIuJ2XCKobIaO4kICtFtZdpwjXS6OKiCc3cMZF153i4
+hnbOaKGArSa0c0AJdRw1oZkXNsijh6traOeGMbJY2k7zd5zQQBG7twADACeQHTcDpaCSAAAAAElF
+TkSuQmCC
+
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://web.archive.org/_static/images/toolbar/wm_tb_nxt_off.png
+
+iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAMhJREFUeNqU0s8KAUEcwPHBJjm5KHkCVy/BRZKnUMpBuXKmHGz+pDbl
+CVwdOCoH5U8pD+DiwM1BSb5TO7WHjfn96tPW1reZndnI1Jt7SqkR9kowUZSwwwBpSfjxnw2cUEfc
+JgxOBkNsUZSEZvJYYoGcJDRT8Q+tj5Qk1JNAE2fUELMNzWQxwRFlSWgmqXfhCII7unDxsgnfmKGN
+m3n5L1yhhYPtdVxQRSEsClvxgZ7/9zx/bcUJrKq/o4OrzUnpcI0xNpI7+QowAGDEIqP9eOV2AAAA
+AElFTkSuQmCC
+
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://web.archive.org/_static/images/loading.gif
+
+R0lGODlhFAAUAOMIAAAAABoaGjMzM0xMTGZmZoCAgJmZmbKysv//////////////////////////
+/////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQBCgAIACwAAAAAFAAUAAAEUxDJSau9CADMteZTEEje
+hhzHJYqkiaLWOlZvGs8WDO6UIPAGw8TnAwWDEuKPcxQml0YnjzcYYAqFS7VqwWItWyuCQJB4s2Ax
+mWxGg9bl6YQtl0cAACH5BAEKAA8ALAAAAAAUABQAAART8MlJq70vBMy15pMgSN72AMAliqSJotY6
+Vm8azxYM7tQw8IfDxOcDBYMS4o9zFCaXRiePRyBgDIZLtWrBYi1b66NQkHizYDGZbEaD1uXphC2X
+RwAAIfkEAQoADwAsAAAAABQAFAAABFPwyUmrvU8IzLXm0zBI3vYEwSWKpImi1jpWbxrPFgzuFEHw
+AMDE5wMFgxLij3MUJpdGJ49XKGAOh0u1asFiLVvrw2CQeLNgMZlsRoPW5emELZdHAAAh+QQBCgAP
+ACwAAAAAFAAUAAAEU/DJSau9bwzMteYTQUje9gjCJYqkiaLWOlZvGs8WDO5UUfCBwMTnAwWDEuKP
+cxQml0Ynj2cwYACAS7VqwWItW+vjcJB4s2AxmWxGg9bl6YQtl0cAACH5BAEKAA8ALAAAAAAUABQA
+AART8MlJq72PEMy15lNRSN72DMMliqSJotY6Vm8azxYM7pRh8ALBxOcDBYMS4o9zFCaXRiePdzhg
+AoFLtWrBYi1b6wMAkHizYDGZbEaD1uXphC2XRwAAIfkEAQoADwAsAAAAABQAFAAABFPwyUmrva8U
+zLXmk2FI3vYQxCWKpImi1jpWbxrPFgzu1HHwg8HE5wMFgxLij3MUJpdGJ48HAGAEgku1asFiLVvr
+IxCQeLNgMZlsRoPW5emELZdHAAAh+QQBCgAPACwAAAAAFAAUAAAEU/DJSau9zxjMtebTcUje9hTF
+JYqkiaLWOlZvGs8WDO4UAPAEwsTnAwWDEuKPcxQml0YnjxcIYAaDS7VqwWItW+tDIJB4s2AxmWxG
+g9bl6YQtl0cAACH5BAEKAA8ALAAAAAAUABQAAART8MlJq73vHMy15hMASN72GMYliqSJotY6Vm8a
+zxYM7lQQ8IXCxOcDBYMS4o9zFCaXRiePJxBgCIRLtWrBYi1b62MwkHizYDGZbEaD1uXphC2XRwAA
+Ow==
+
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5----
+Content-Type: text/html
+Content-ID: <frame-89A7CC11B395FD56E198580F7C083C52@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://archive.org/includes/donate.php?as_page=1&platform=wb&referer=https%3A//web.archive.org/web/20220930035909/https%3A//summit.ivanvelickovic.com/getting_started/index.html
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body></body></html>
+------MultipartBoundary--kuZATwifE5SSM8f7KaYXfCGuew4I7brJbXlXJ3T7q5------
