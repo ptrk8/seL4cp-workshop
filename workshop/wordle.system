@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system>
+    <!-- Shared buffer for client and serial_server. -->
+    <memory_region name="serial_server_buf" size="0x1_000" />
+    <memory_region name="client_buf" size="0x1_000" />
     <!-- Define a physical memory region. -->
     <memory_region name="uart_mr" size="0x1000" phys_addr="0x9000000" />
     <!-- Protection domain for serial server. -->
     <protection_domain name="serial_server" priority="254">
         <program_image path="serial_server.elf" />
-        <!-- Mapping region of memory to physical memory. -->
-        <map mr="uart_mr" vaddr="0x2_000_000" perms="rwx" cached="false"  setvar_vaddr="uart_base_vaddr"/>
+        <!-- For IRQ to work. -->
         <irq irq="33" id="0" />
+        <!-- Mapping region physical address to virtual address for UART. -->
+        <map mr="uart_mr" vaddr="0x2_000_000" perms="rwx" cached="false"  setvar_vaddr="uart_base_vaddr"/>
+        <!-- Shared buffers. -->
+        <map mr="serial_server_buf" vaddr="0x2_002_000" perms="rw" setvar_vaddr="serial_server_buf"/>
+        <map mr="client_buf" vaddr="0x2_004_000" perms="rw" setvar_vaddr="client_buf"/>
     </protection_domain>
     <!-- Protection domain for client. -->
     <protection_domain name="client" priority="254">
         <program_image path="client.elf" />
+        <!-- Shared buffers. -->
+        <map mr="serial_server_buf" vaddr="0x2_002_000" perms="rw" setvar_vaddr="serial_server_buf"/>
+        <map mr="client_buf" vaddr="0x2_004_000" perms="rw" setvar_vaddr="client_buf"/>
     </protection_domain>
     <!-- Channel for serial_server and client. -->
     <channel>

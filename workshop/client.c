@@ -8,8 +8,11 @@
 
 #define INVALID_CHAR (-1)
 
-/* My #defines. */
+/* Start of my changes. */
 #define CLIENT_CHANNEL_ID (2)
+uintptr_t serial_server_buf;
+uintptr_t client_buf;
+/* End of my changes. */
 
 struct wordle_char {
     int ch;

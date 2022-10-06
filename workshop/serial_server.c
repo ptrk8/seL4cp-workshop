@@ -15,11 +15,14 @@
 
 #define REG_PTR(base, offset) ((volatile uint32_t *)((base) + (offset)))
 
-/* My #defines */
+uintptr_t uart_base_vaddr;
+
+/* Start of my changes. */
 #define SERIAL_SERVER_CHANNEL_ID (1)
 #define UART_IRQ_CHANNEL_ID (0)
-
-uintptr_t uart_base_vaddr;
+uintptr_t serial_server_buf;
+uintptr_t client_buf;
+/* End of my changes. */
 
 void uart_init() {
     *REG_PTR(uart_base_vaddr, UARTIMSC) = 0x50;
