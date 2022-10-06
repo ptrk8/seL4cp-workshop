@@ -78,7 +78,6 @@ notified(sel4cp_channel channel) {
             break;
         }
         default: {
-            sel4cp_dbg_puts("Did not handle notification from channel %d.", channel);
             break;
         }
     }
