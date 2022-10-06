@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system>
     <!-- Define your system here -->
+    <protection_domain name="serial_server" priority="254">
+        <program_image path="serial_server.elf" />
+    </protection_domain>
 </system>
