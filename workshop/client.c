@@ -8,6 +8,9 @@
 
 #define INVALID_CHAR (-1)
 
+/* My #defines. */
+#define CLIENT_CHANNEL_ID (2)
+
 struct wordle_char {
     int ch;
     enum character_state state;
@@ -35,6 +38,7 @@ sel4cp_msginfo wordle_server_send(char *word) {
 
 void serial_send(char *str) {
     // Implement this function to get the serial server to print the string.
+    sel4cp_notify(CLIENT_CHANNEL_ID);
 }
 
 // This function prints a CLI Wordle using pretty colours for what characters
@@ -91,7 +95,8 @@ bool char_is_backspace(int ch) {
 bool char_is_valid(int ch) {
     // Only allow alphabetical letters and do not accept a character if the current word
     // has already been filled.
-    return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') && curr_letter != WORD_LENGTH;
+    // return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') && curr_letter != WORD_LENGTH;
+    return ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) && curr_letter != WORD_LENGTH;
 }
 
 void init(void) {

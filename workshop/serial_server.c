@@ -77,6 +77,11 @@ notified(sel4cp_channel channel) {
             sel4cp_irq_ack(channel);
             break;
         }
+        case SERIAL_SERVER_CHANNEL_ID: {
+            /* This will execute when client sends a message. */
+            sel4cp_dbg_puts("Received message.");
+            break;
+        }
         default: {
             break;
         }
