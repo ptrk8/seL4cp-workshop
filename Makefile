@@ -36,7 +36,7 @@ build-part1:
 	$(MAKE) -C $(WORKSHOP_DIR) \
 		part1 SEL4CP_SDK=$(SDK_DIR)
 
-# Run `part1`. This will VMFault.
+# Run `part1`.
 .PHONY: run-part1
 run-part1: build-part1 run
 
