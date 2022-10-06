@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system>
+    <!-- Define a physical memory region. -->
+    <memory_region name="uart_mr" size="0x1000" phys_addr="0x9000000" />
     <!-- Define your system here -->
     <protection_domain name="serial_server" priority="254">
         <program_image path="serial_server.elf" />
+        <map mr="uart_mr" vaddr="0x2_000_000" perms="rwx" setvar_vaddr="buffer"/>
     </protection_domain>
 </system>
