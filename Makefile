@@ -1,4 +1,5 @@
-SDK_DIR = "sdk"
+SDK_DIR = "$(PWD)/sdk"
+WORKSHOP_DIR = "$(PWD)/workshop"
 
 # Temporary build directory for hello world example.
 BUILD_DIR_CHECK = "hello_world_build"
@@ -29,10 +30,16 @@ check:
 		-m size=1G \
 		-display none
 
-.PHONY: build
-build: check
-	# # Untar the the SDK.
-	# tar xvf sdk.tar.gz
+# Run the `part1` make command in the workshops directory
+.PHONY: build-part1
+build-part1:
+	$(MAKE) -C $(WORKSHOP_DIR) \
+		part1 SEL4CP_SDK=$(SDK_DIR)
+
+.PHONY: run-part1
+run-part1: build-part1
+	$(MAKE) -C $(WORKSHOP_DIR) \
+		run
 
 
 
