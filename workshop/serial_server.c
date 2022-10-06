@@ -15,6 +15,10 @@
 
 #define REG_PTR(base, offset) ((volatile uint32_t *)((base) + (offset)))
 
+/* My #defines */
+#define SERIAL_SERVER_CHANNEL_ID (1)
+#define UART_IRQ_CHANNEL_ID (0)
+
 uintptr_t uart_base_vaddr;
 
 void uart_init() {
@@ -60,4 +64,20 @@ init(void) {
 }
 
 void
-notified(sel4cp_channel channel) {}
+notified(sel4cp_channel channel) {
+    /* I've set IRQ channel ID for UART as 0. */
+    if (channel == UART_IRQ_CHANNEL_ID) {
+        /* Handle UART. */
+        uart_handle_irq();
+        /* Get character. */
+        char ch = uart_get_char();
+        /* Print character to serial device. */
+        uart_put_char(ch);
+        /* Acknowledge receipt of the interrupt. */
+        sel4cp_irq_ack(channel);
+    }
+}
+
+
+
+

@@ -7,5 +7,17 @@
         <program_image path="serial_server.elf" />
         <!-- Mapping region of memory to physical memory. -->
         <map mr="uart_mr" vaddr="0x2_000_000" perms="rwx" cached="false"  setvar_vaddr="uart_base_vaddr"/>
+        <irq irq="33" id="0" />
     </protection_domain>
+    <!-- Protection domain for wordle server. -->
+    <protection_domain name="wordle_server" priority="254">
+        <program_image path="wordle_server.elf" />
+    </protection_domain>
+    <!-- Channel for serial_server and wordle_server. -->
+    <channel>
+        <end pd="serial_server" id="1" />
+        <end pd="wordle_server" id="2" />
+    </channel>
 </system>
+
+
