@@ -15,7 +15,7 @@
 
 #define REG_PTR(base, offset) ((volatile uint32_t *)((base) + (offset)))
 
-uintptr_t uart_base_vaddr = 0x2000000;
+uintptr_t uart_base_vaddr;
 
 void uart_init() {
     *REG_PTR(uart_base_vaddr, UARTIMSC) = 0x50;

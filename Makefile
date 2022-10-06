@@ -30,14 +30,29 @@ check:
 		-m size=1G \
 		-display none
 
-# Run the `part1` make command in the workshops directory
+# Run the `part1` make command in the workshop/ directory.
 .PHONY: build-part1
 build-part1:
 	$(MAKE) -C $(WORKSHOP_DIR) \
 		part1 SEL4CP_SDK=$(SDK_DIR)
 
+# Run `part1`. This will VMFault.
 .PHONY: run-part1
-run-part1: build-part1
+run-part1: build-part1 run
+
+# Run the `part2` make command in the workshop/ directory.
+.PHONY: build-part2
+build-part2:
+	$(MAKE) -C $(WORKSHOP_DIR) \
+		part1 SEL4CP_SDK=$(SDK_DIR)
+
+# Run `part2`.
+.PHONY: run-part2
+run-part2: build-part2 run
+
+# Runs built seL4cp image.
+.PHONY: run
+run:
 	$(MAKE) -C $(WORKSHOP_DIR) \
 		run
 
