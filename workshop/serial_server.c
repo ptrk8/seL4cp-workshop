@@ -65,16 +65,22 @@ init(void) {
 
 void
 notified(sel4cp_channel channel) {
-    /* I've set IRQ channel ID for UART as 0. */
-    if (channel == UART_IRQ_CHANNEL_ID) {
-        /* Handle UART. */
-        uart_handle_irq();
-        /* Get character. */
-        char ch = uart_get_char();
-        /* Print character to serial device. */
-        uart_put_char(ch);
-        /* Acknowledge receipt of the interrupt. */
-        sel4cp_irq_ack(channel);
+    switch (channel) {
+        case UART_IRQ_CHANNEL_ID: {
+            /* Handle UART. */
+            uart_handle_irq();
+            /* Get character. */
+            char ch = uart_get_char();
+            /* Print character to serial device. */
+            uart_put_char(ch);
+            /* Acknowledge receipt of the interrupt. */
+            sel4cp_irq_ack(channel);
+            break;
+        }
+        default: {
+            sel4cp_dbg_puts("Did not handle notification from channel %d.", channel);
+            break;
+        }
     }
 }
 
