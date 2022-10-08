@@ -52,6 +52,17 @@ build-part2:
 .PHONY: run-part2
 run-part2: build-part2 run
 
+# Run the `part3` make command in the workshop/ directory.
+.PHONY: build-part3
+build-part3:
+	$(MAKE) -C $(WORKSHOP_DIR) \
+		part3 \
+		SEL4CP_SDK=$(SDK_DIR)
+
+# Run `part3`.
+.PHONY: run-part3
+run-part3: build-part3 run
+
 # Runs built seL4cp image.
 .PHONY: run
 run:
