@@ -153,7 +153,7 @@ void notified(sel4cp_channel channel) {
                 /* We re-print the Wordle table by setting the `clear_terminal` param to `true`. */
                 print_table(true);
             } else if ((ch == CARRIAGE_RETURN_KEY || ch == ENTER_KEY) && curr_letter == WORD_LENGTH) {
-                /* If the user entered the `ENTER`and they have already
+                /* If the user entered the `ENTER` key and they have already
                 entered the full length of the word, then we should take them to a new line of
                 the table by incrementing `curr_row`. */
                 curr_row++;
