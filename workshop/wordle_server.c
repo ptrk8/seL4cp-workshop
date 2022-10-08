@@ -39,6 +39,8 @@ notified(sel4cp_channel channel) {}
 /* Protected Procedure Entry point. */
 sel4cp_msginfo protected(sel4cp_channel ch, sel4cp_msginfo msginfo) {
     switch (ch) {
+        /* This case will execute when the `client` sends us a Protected
+        Procedure Call (PPC) */
         case WORDLE_SERVER_TO_CLIENT_CHANNEL_ID: {
             /* Create an empty string to receive the user's attempt. */
             char attempt[WORD_LENGTH + 1] = {0};
