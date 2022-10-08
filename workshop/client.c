@@ -10,6 +10,7 @@
 
 /* Start of my changes. */
 #define CLIENT_TO_SERIAL_SERVER_CHANNEL_ID (2)
+#define CLIENT_TO_WORDLE_SERVER_CHANNEL_ID (3)
 /* This is the buffer we read from and `serial_server` writes to. */
 uintptr_t serial_server_buf;
 /* This is the buffer we write to and `serial_server` reads from. */
@@ -41,9 +42,10 @@ void update_state() {
     }
 }
 
+// Implement this function to send the word over PPC.
 sel4cp_msginfo wordle_server_send(char *word) {
-    // Implement this function to send the word over PPC
-    return sel4cp_msginfo_new(0, WORD_LENGTH);
+    return sel4cp_ppcall(CLIENT_TO_WORDLE_SERVER_CHANNEL_ID, sel4cp_msginfo_new(0, WORD_LENGTH));
+    // return sel4cp_msginfo_new(0, WORD_LENGTH);
 }
 
 // Implement this function to get the serial server to print the string.
@@ -153,6 +155,23 @@ void notified(sel4cp_channel channel) {
                 /* We re-print the Wordle table by setting the `clear_terminal` param to `true`. */
                 print_table(true);
             } else if ((ch == CARRIAGE_RETURN_KEY || ch == ENTER_KEY) && curr_letter == WORD_LENGTH) {
+                /* Part 3 code: */
+
+                /* If the user entered the `ENTER` key then we must check if the user's attempt is
+                correct by making a Protected Procedure Call (PPC) via the `wordle_server_send()`
+                function. */
+                /* Create an empty string to store the user's attempt. */
+                char attempt[WORD_LENGTH] = {0};
+                for (int i = 0; i < WORD_LENGTH; i++) {
+                    /* Copy the word character by character from the relevant row in 
+                    the table to `attempt`. */
+                    attempt[i] = table[curr_row][i].ch;
+                }
+                /* Pass the user's `attempt` to `wordle_server_send()`, which expects a char *. */
+                wordle_server_send(attempt);
+
+                /* Part 2 code: */
+
                 /* If the user entered the `ENTER` key and they have already
                 entered the full length of the word, then we should take them to a new line of
                 the table by incrementing `curr_row`. */

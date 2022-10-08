@@ -48,10 +48,23 @@
             perms="rw" 
             setvar_vaddr="client_buf"/>
     </protection_domain>
-    <!-- Channel for serial_server and client. -->
+    <!-- Protection domain for `worldle_server`. 
+        - In order to facilitate Protected Procedure Calls (PPCs) from `client`, 
+        we need this PD's priority to be higher than the `client's` priority.
+        - We also need to make sure `pp` is set to `true` in order to allow
+        for PPCs to this PD. -->
+    <protection_domain name="wordle_server" priority="254" pp="true">
+        <program_image path="wordle_server.elf" />
+    </protection_domain>
+    <!-- Channel between `serial_server` and `client`. -->
     <channel>
         <end pd="serial_server" id="1" />
         <end pd="client" id="2" />
+    </channel>
+    <!-- Channel between `client` and `wordle_server`. -->
+    <channel>
+        <end pd="client" id="3" />
+        <end pd="wordle_server" id="4" />
     </channel>
 </system>
 

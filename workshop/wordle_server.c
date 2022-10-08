@@ -35,3 +35,9 @@ init(void) {
 
 void
 notified(sel4cp_channel channel) {}
+
+/* Protected Procedure Entry point. */
+sel4cp_msginfo protected(sel4cp_channel ch, sel4cp_msginfo msginfo) {
+    sel4cp_dbg_puts("Received Protected Procedure Call!");
+    return sel4cp_msginfo_new(0, WORD_LENGTH);
+}
