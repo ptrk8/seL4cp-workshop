@@ -18,7 +18,7 @@
 uintptr_t uart_base_vaddr;
 
 /* Start of my changes. */
-#define SERIAL_SERVER_CHANNEL_ID (1)
+#define SERIAL_SERVER_TO_CLIENT_CHANNEL_ID (1)
 #define UART_IRQ_CHANNEL_ID (0)
 uintptr_t serial_server_buf;
 uintptr_t client_buf;
@@ -70,17 +70,32 @@ void
 notified(sel4cp_channel channel) {
     switch (channel) {
         case UART_IRQ_CHANNEL_ID: {
+            // /* My solution for Part 1. */
+
+            // /* Handle UART. */
+            // uart_handle_irq();
+            // /* Get character. */
+            // char ch = uart_get_char();
+            // /* Print character to serial device. */
+            // uart_put_char(ch);
+            // /* Acknowledge receipt of the interrupt. */
+            // sel4cp_irq_ack(channel);
+
+            /* My solution for Part 2. */
+
             /* Handle UART. */
             uart_handle_irq();
             /* Get character. */
             char ch = uart_get_char();
-            /* Print character to serial device. */
-            uart_put_char(ch);
+            /* Save the character in `serial_server_buf`. */
+            *((char *) serial_server_buf) = ch;
+            /* Notify `client` that we're sending them a character. */
+            sel4cp_notify(SERIAL_SERVER_TO_CLIENT_CHANNEL_ID);
             /* Acknowledge receipt of the interrupt. */
             sel4cp_irq_ack(channel);
             break;
         }
-        case SERIAL_SERVER_CHANNEL_ID: {
+        case SERIAL_SERVER_TO_CLIENT_CHANNEL_ID: {
             /* We print the character that was sent over by `client`. Since
             we have a higher priority than `client`, we will pre-empt `client`
             until this function ends. */

@@ -10,8 +10,15 @@
 
 /* Start of my changes. */
 #define CLIENT_TO_SERIAL_SERVER_CHANNEL_ID (2)
+/* This is the buffer we read from and `serial_server` writes to. */
 uintptr_t serial_server_buf;
+/* This is the buffer we write to and `serial_server` reads from. */
 uintptr_t client_buf;
+/* ASCII code for the ENTER key. */
+#define ENTER_KEY (10)
+#define CARRIAGE_RETURN_KEY (13)
+#define BACKSPACE_KEY (8)
+#define DELETE_KEY (127)
 /* End of my changes. */
 
 struct wordle_char {
@@ -46,7 +53,7 @@ void serial_send(char *str) {
     /* We iterate through the string until we hit the NULL terminator,
     which we don't bother sending to the serial_server. */
     while (str[curr_idx] != '\0') {
-        /* Save the character in the client buf. */
+        /* Save the character in `client_buf`. */
         *((char *) client_buf) = str[curr_idx];
         /* Notify the `serial_server` like so. Since, we have a lower
         priority than the `serial_server`, we will be pre-empted after
@@ -127,4 +134,51 @@ void init(void) {
     print_table(false);
 }
 
-void notified(sel4cp_channel channel) {}
+void notified(sel4cp_channel channel) {
+    switch (channel) {
+        case CLIENT_TO_SERIAL_SERVER_CHANNEL_ID: {
+            /* This will run if the `serial_server` receives a character. */
+            /* Get the character from `serial_server_buf`. */
+            char ch = *((char *) serial_server_buf);
+            if (char_is_valid(ch)) {
+                /* If the character is valid, we simply add it to the table. */
+                /* Create a new `wordle_char` struct containing out character `ch`. */
+                struct wordle_char valid_ch = {0};
+                valid_ch.ch = ch;
+                /* If the character is valid, we should add the character to the correct
+                position in our 2D `table` array. */
+                table[curr_row][curr_letter] = valid_ch;
+                /* We should also advance the `curr_letter` for the next character. */
+                curr_letter++;
+                /* We re-print the Wordle table by setting the `clear_terminal` param to `true`. */
+                print_table(true);
+            } else if (ch == CARRIAGE_RETURN_KEY && curr_letter == WORD_LENGTH) {
+                /* If the user entered the `CARRIAGE_RETURN_KEY`and they have already
+                entered the full length of the word, then we should take them to a new line of
+                the table by incrementing `curr_row`. */
+                curr_row++;
+                /* Since we are on a fresh row, we should reset `curr_letter` to 0. */
+                curr_letter = 0;
+                /* Note, we do not need to call `print_table(true)` since there is nothing
+                to display to the user. */
+            } else if ((ch == BACKSPACE_KEY || ch == DELETE_KEY) && curr_letter > 0) {
+                /* Create an "empty" Wordle character that contains a ' ' character. */
+                struct wordle_char empty_ch = {0};
+                empty_ch.ch = ' ';
+                /* Set the last character in the current row to our empty character. */
+                table[curr_row][curr_letter - 1] = empty_ch;
+                /* Decrement the current letter since we've deleted a letter. */
+                curr_letter--;
+                /* Re-print the Wordle table by setting the `clear_terminal` param to `true`. */
+                print_table(true);
+            }
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+}
+
+
+
