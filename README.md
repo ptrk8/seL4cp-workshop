@@ -2,7 +2,7 @@
 
 ## Context
 
-* This repo contains my workshop solutions to the [seL4 Core Platform Summit Workshop "Draft-Run"](https://summitdryrun.ivanvelickovic.com/part0.html).
+* This repo contains my workshop solutions to the [seL4 Core Platform Summit Workshop "Draft Edition"](https://summitdryrun.ivanvelickovic.com/part0.html).
   * The real workshop will be held during the [seL4 Summit 2022 (11-13 Oct)](https://sel4.systems/Foundation/Summit/home.pml) in Munich, Germany.
 * The workshop task is a simple C implementation of the popular web-based game, ["Wordle"](https://www.nytimes.com/games/wordle/index.html), running on the [seL4 Core Platform](https://trustworthy.systems/projects/TS/sel4cp/).
 * This workshop was my first interaction with the seL4 Core Platform.
@@ -14,6 +14,7 @@
   * My solution is based upon this version of the workshop.
 * [Final version of the workshop materials.](https://summit.ivanvelickovic.com/)
   * As of writing (9 Oct 2022), the final workshop materials have not been released.
+  * However, you should follow this version of the workshop once it is live.
 * [seL4 Core Platform GitHub repo.](https://github.com/BreakawayConsulting/sel4cp)
 * [seL4 Core Platform Manual.](https://github.com/BreakawayConsulting/sel4cp/blob/main/docs/README.md)
 
