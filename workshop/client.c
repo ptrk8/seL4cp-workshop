@@ -146,7 +146,8 @@ void init(void) {
 
 void notified(sel4cp_channel channel) {
     switch (channel) {
-        /* This case will execute when the `serial_server` notifies us. */
+        /* This case will execute when the `serial_server` notifies us
+        that the user has pressed a character. */
         case CLIENT_TO_SERIAL_SERVER_CHANNEL_ID: {
             /* This will run if the `serial_server` receives a character. */
             /* Get the character from `serial_server_buf`. */
