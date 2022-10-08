@@ -15,6 +15,8 @@
 uintptr_t serial_server_buf;
 /* This is the buffer we write to and `serial_server` reads from. */
 uintptr_t client_buf;
+/* This is the buffer we read from and `wordle_server_buf` writes to. */
+uintptr_t wordle_server_buf;
 /* ASCII code for the ENTER key. */
 #define ENTER_KEY (10)
 #define CARRIAGE_RETURN_KEY (13)
@@ -179,7 +181,9 @@ void notified(sel4cp_channel channel) {
                     the table to `attempt`. */
                     attempt[i] = table[curr_row][i].ch;
                 }
-                /* Pass the user's `attempt` to `wordle_server_send()`, which expects a char *. */
+                /* Pass the user's `attempt` to `wordle_server_send()`, which expects 
+                a char *. In production code, you probably should be checking the return
+                value by parsing the message returned by `wordle_server_send()`. */
                 wordle_server_send(attempt);
 
                 /* Part 2 code: */
@@ -203,6 +207,21 @@ void notified(sel4cp_channel channel) {
                 /* Re-print the Wordle table by setting the `clear_terminal` param to `true`. */
                 print_table(true);
             }
+            break;
+        }
+        /* This case will execute when the `wordle_server` notifies us that
+        the `client` has finished checking an attempt by the user. This happens
+        after we send the `wordle_server` a PPC via `wordle_server_send()`, after
+        they have pressed the `ENTER` key. */
+        case CLIENT_TO_WORDLE_SERVER_CHANNEL_ID: {
+            for (int i = 0; i < WORD_LENGTH; i++) {
+                /* Since this is called AFTER the user has pressed the `ENTER` key,
+                the word we want to check is is in `curr_row - 1` instead of `curr_row`. */
+                table[curr_row - 1][i].state = ((enum character_state *) wordle_server_buf)[i];
+            }
+            /* Since we've altered the state of a row in our `table`, we need to 
+            re-print the entire table again. */
+            print_table(true);
             break;
         }
         default: {

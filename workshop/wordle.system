@@ -6,6 +6,9 @@
     <!-- This is a shared buffer that `client_buf` writes to and `serial_server_buf`
     reads from. -->
     <memory_region name="client_buf" size="0x1_000" />
+    <!-- This is a shared buffer that `wordle_server_buf` writes to and `client`
+    reads from. -->
+    <memory_region name="wordle_server_buf" size="0x1_000" />
     <!-- Define a physical memory region. -->
     <memory_region name="uart_mr" size="0x1000" phys_addr="0x9000000" />
     <!-- Protection domain for `serial_server`. Note that the priority
@@ -47,6 +50,11 @@
             vaddr="0x2_004_000" 
             perms="rw" 
             setvar_vaddr="client_buf"/>
+        <!-- We only need Read access to `world_server_buf` from this PD. -->
+        <map mr="wordle_server_buf" 
+            vaddr="0x2_006_000" 
+            perms="rw" 
+            setvar_vaddr="wordle_server_buf"/>
     </protection_domain>
     <!-- Protection domain for `worldle_server`. 
         - In order to facilitate Protected Procedure Calls (PPCs) from `client`, 
@@ -55,6 +63,11 @@
         for PPCs to this PD. -->
     <protection_domain name="wordle_server" priority="254" pp="true">
         <program_image path="wordle_server.elf" />
+        <!-- We need Read/Write access to `world_server_buf` from this PD. -->
+        <map mr="wordle_server_buf" 
+            vaddr="0x2_006_000" 
+            perms="rw" 
+            setvar_vaddr="wordle_server_buf"/>
     </protection_domain>
     <!-- Channel between `serial_server` and `client`. -->
     <channel>

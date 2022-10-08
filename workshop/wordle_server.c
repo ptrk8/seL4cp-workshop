@@ -4,7 +4,11 @@
 #include "dictionary.h"
 #include "wordle.h"
 
+/* Start of my changes. */
 #define WORDLE_SERVER_TO_CLIENT_CHANNEL_ID (4)
+/* This is the buffer we write to and `client` reads from. */
+uintptr_t wordle_server_buf;
+/* End of my changes. */
 
 const char *word = "hello";
 
@@ -38,6 +42,7 @@ notified(sel4cp_channel channel) {}
 
 /* Protected Procedure Entry point. */
 sel4cp_msginfo protected(sel4cp_channel ch, sel4cp_msginfo msginfo) {
+    /* Code for Part 3: */
     switch (ch) {
         /* This case will execute when the `client` sends us a Protected
         Procedure Call (PPC) */
@@ -49,9 +54,19 @@ sel4cp_msginfo protected(sel4cp_channel ch, sel4cp_msginfo msginfo) {
             for (int i = 0; i < WORD_LENGTH; i++) {
                 /* Obtain each character from the corresponding message registers. */
                 attempt[i] = sel4cp_mr_get(i);
+                /* Set each element of `wordle_server_buf` to the relevant
+                `enum character_state` value. The `client` will check `wordle_server_buf`
+                to discover the result of this attempt. */
+                ((enum character_state *) wordle_server_buf)[i] = char_to_state(attempt[i], word, i);
             }
-            sel4cp_dbg_puts(attempt);
-            return sel4cp_msginfo_new(0, WORD_LENGTH);
+            // sel4cp_dbg_puts(attempt); /* For debugging. */
+            /* Notify `client` that we're done checking the word. The `client` can
+            now iterate through `wordle_server_buf` on their side to discover the
+            outcome of their attempt. */
+            sel4cp_notify(WORDLE_SERVER_TO_CLIENT_CHANNEL_ID);
+            /* Return an empty message. In production code, you probably should be returning
+            a message containing some form of error value for the `client` to check. */
+            return sel4cp_msginfo_new(0, 0);
         }
         default: {
             break;
