@@ -44,7 +44,15 @@ void update_state() {
 
 // Implement this function to send the word over PPC.
 sel4cp_msginfo wordle_server_send(char *word) {
-    return sel4cp_ppcall(CLIENT_TO_WORDLE_SERVER_CHANNEL_ID, sel4cp_msginfo_new(0, WORD_LENGTH));
+    /* Create a `msg` the length of the word. */
+    sel4cp_msginfo msg = sel4cp_msginfo_new(0, WORD_LENGTH);
+    /* Note, we don't bother sending '\0' in `word` in the following for-loop. */
+    for (int i = 0; i < WORD_LENGTH; i++) {
+        /* Set each message register to the corresponding character in `word`. */
+        sel4cp_mr_set(i, word[i]);
+    }
+    /* Make our protected procedure call with our `msg`. */
+    return sel4cp_ppcall(CLIENT_TO_WORDLE_SERVER_CHANNEL_ID, msg);
     // return sel4cp_msginfo_new(0, WORD_LENGTH);
 }
 
@@ -161,7 +169,9 @@ void notified(sel4cp_channel channel) {
                 correct by making a Protected Procedure Call (PPC) via the `wordle_server_send()`
                 function. */
                 /* Create an empty string to store the user's attempt. */
-                char attempt[WORD_LENGTH] = {0};
+                char attempt[WORD_LENGTH + 1] = {0};
+                /* We only iterate `WORLD_LENGTH` times since the last char in `attempt`
+                will always be '\0' */
                 for (int i = 0; i < WORD_LENGTH; i++) {
                     /* Copy the word character by character from the relevant row in 
                     the table to `attempt`. */

@@ -4,7 +4,7 @@
 #include "dictionary.h"
 #include "wordle.h"
 
-#define CLIENT_CHANNEL 1
+#define WORDLE_SERVER_TO_CLIENT_CHANNEL_ID (4)
 
 const char *word = "hello";
 
@@ -38,6 +38,22 @@ notified(sel4cp_channel channel) {}
 
 /* Protected Procedure Entry point. */
 sel4cp_msginfo protected(sel4cp_channel ch, sel4cp_msginfo msginfo) {
-    sel4cp_dbg_puts("Received Protected Procedure Call!");
+    switch (ch) {
+        case WORDLE_SERVER_TO_CLIENT_CHANNEL_ID: {
+            /* Create an empty string to receive the user's attempt. */
+            char attempt[WORD_LENGTH + 1] = {0};
+            /* We only iterate `WORLD_LENGTH` times since the last char in `attempt`
+            will always be '\0' */
+            for (int i = 0; i < WORD_LENGTH; i++) {
+                /* Obtain each character from the corresponding message registers. */
+                attempt[i] = sel4cp_mr_get(i);
+            }
+            sel4cp_dbg_puts(attempt);
+            return sel4cp_msginfo_new(0, WORD_LENGTH);
+        }
+        default: {
+            break;
+        }
+    }
     return sel4cp_msginfo_new(0, WORD_LENGTH);
 }
