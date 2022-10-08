@@ -9,6 +9,10 @@ clean:
 	rm -rf \
 		$(BUILD_DIR_CHECK)
 
+# ====================================
+# Commands to check environment:
+# ====================================
+
 # Checks that the environment has been set up correctly.
 .PHONY: check
 check:
@@ -30,6 +34,10 @@ check:
 		-m size=1G \
 		-display none
 
+# ====================================
+# Commands for Part 1 of Workshop:
+# ====================================
+
 # Run the `part1` make command in the workshop/ directory.
 .PHONY: build-part1
 build-part1:
@@ -40,6 +48,10 @@ build-part1:
 # Run `part1`.
 .PHONY: run-part1
 run-part1: build-part1 run
+
+# ====================================
+# Commands for Part 2 of Workshop:
+# ====================================
 
 # Run the `part2` make command in the workshop/ directory.
 .PHONY: build-part2
@@ -52,6 +64,10 @@ build-part2:
 .PHONY: run-part2
 run-part2: build-part2 run
 
+# ====================================
+# Commands for Part 3 of Workshop:
+# ====================================
+
 # Run the `part3` make command in the workshop/ directory.
 .PHONY: build-part3
 build-part3:
@@ -63,7 +79,11 @@ build-part3:
 .PHONY: run-part3
 run-part3: build-part3 run
 
-# Runs built seL4cp image.
+# ====================================
+# General commands:
+# ====================================
+
+# Runs a built seL4cp image.
 .PHONY: run
 run:
 	$(MAKE) -C $(WORKSHOP_DIR) \
