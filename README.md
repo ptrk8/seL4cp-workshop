@@ -13,8 +13,8 @@
 * [Draft version of the workshop materials.](https://summitdryrun.ivanvelickovic.com/part0.html)
   * My solution is based upon this version of the workshop.
 * [Final version of the workshop materials.](https://summit.ivanvelickovic.com/)
-  * As of writing (9 Oct 2022), the final workshop materials have not been released.
-  * However, you should follow this version of the workshop once it's live.
+  * As of writing (9 Oct 2022), the final workshop materials have not been released yet.
+  * However, you should follow this final version of the workshop once it's live.
 * [seL4 Core Platform GitHub repo.](https://github.com/BreakawayConsulting/sel4cp)
 * [seL4 Core Platform Manual.](https://github.com/BreakawayConsulting/sel4cp/blob/main/docs/README.md)
 
