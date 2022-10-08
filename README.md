@@ -2,7 +2,7 @@
 
 ## Context
 
-* This repo contains my workshop solutions to the [seL4 Core Platform Summit Workshop Dry-Run](https://summitdryrun.ivanvelickovic.com/part0.html).
+* This repo contains my workshop solutions to the [seL4 Core Platform Summit Workshop Draft-Run](https://summitdryrun.ivanvelickovic.com/part0.html).
 * The workshop task is a simple C implementation of the popular web-based game, ["Wordle"](https://www.nytimes.com/games/wordle/index.html), running on the [seL4 Core Platform](https://trustworthy.systems/projects/TS/sel4cp/).
 * This workshop was my first interaction with the seL4 Core Platform.
 
