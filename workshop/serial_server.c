@@ -81,8 +81,10 @@ notified(sel4cp_channel channel) {
             break;
         }
         case SERIAL_SERVER_CHANNEL_ID: {
-            /* This will execute when client sends a message. */
-            sel4cp_dbg_puts("Received message.");
+            /* We print the character that was sent over by `client`. Since
+            we have a higher priority than `client`, we will pre-empt `client`
+            until this function ends. */
+            uart_put_char(*((char *) client_buf));
             break;
         }
         default: {

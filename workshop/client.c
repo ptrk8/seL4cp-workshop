@@ -39,9 +39,23 @@ sel4cp_msginfo wordle_server_send(char *word) {
     return sel4cp_msginfo_new(0, WORD_LENGTH);
 }
 
+// Implement this function to get the serial server to print the string.
 void serial_send(char *str) {
-    // Implement this function to get the serial server to print the string.
-    sel4cp_notify(CLIENT_CHANNEL_ID);
+
+    int curr_idx = 0;
+    /* We iterate through the string until we hit the NULL terminator,
+    which we don't bother sending to the serial_server. */
+    while (str[curr_idx] != '\0') {
+        /* Save the character in the client buf. */
+        *((char *) client_buf) = str[curr_idx];
+        /* Notify the `serial_server` like so. Since, we have a lower
+        priority than the `serial_server`, we will be pre-empted after
+        the call to `sel4cp_notify()` until the `serial_server` has finished 
+        printing the character to the screen. */
+        sel4cp_notify(CLIENT_CHANNEL_ID);
+        /* Increment the index to send the next character to `serial_server`. */
+        curr_idx++;
+    }
 }
 
 // This function prints a CLI Wordle using pretty colours for what characters

@@ -17,7 +17,7 @@
         <map mr="client_buf" vaddr="0x2_004_000" perms="rw" setvar_vaddr="client_buf"/>
     </protection_domain>
     <!-- Protection domain for client. -->
-    <protection_domain name="client" priority="254">
+    <protection_domain name="client" priority="253">
         <program_image path="client.elf" />
         <!-- Shared buffers. -->
         <map mr="serial_server_buf" vaddr="0x2_002_000" perms="rw" setvar_vaddr="serial_server_buf"/>
