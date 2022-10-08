@@ -9,7 +9,7 @@
 #define INVALID_CHAR (-1)
 
 /* Start of my changes. */
-#define CLIENT_CHANNEL_ID (2)
+#define CLIENT_TO_SERIAL_SERVER_CHANNEL_ID (2)
 uintptr_t serial_server_buf;
 uintptr_t client_buf;
 /* End of my changes. */
@@ -52,7 +52,7 @@ void serial_send(char *str) {
         priority than the `serial_server`, we will be pre-empted after
         the call to `sel4cp_notify()` until the `serial_server` has finished 
         printing the character to the screen. */
-        sel4cp_notify(CLIENT_CHANNEL_ID);
+        sel4cp_notify(CLIENT_TO_SERIAL_SERVER_CHANNEL_ID);
         /* Increment the index to send the next character to `serial_server`. */
         curr_idx++;
     }
