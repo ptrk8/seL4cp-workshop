@@ -1,5 +1,6 @@
 SDK_DIR = "$(PWD)/sdk"
 WORKSHOP_DIR = "$(PWD)/workshop"
+HARDWARE_TARGET = "qemu_arm_virt"
 
 # Temporary build directory for hello world example.
 BUILD_DIR_CHECK = "hello_world_build"
@@ -43,7 +44,8 @@ check:
 build-part1:
 	$(MAKE) -C $(WORKSHOP_DIR) \
 		part1 \
-		SEL4CP_SDK=$(SDK_DIR)
+		SEL4CP_SDK=$(SDK_DIR) \
+		SEL4CP_BOARD=$(HARDWARE_TARGET)
 
 # Run `part1`.
 .PHONY: run-part1
@@ -58,7 +60,8 @@ run-part1: build-part1 run
 build-part2:
 	$(MAKE) -C $(WORKSHOP_DIR) \
 		part2 \
-		SEL4CP_SDK=$(SDK_DIR)
+		SEL4CP_SDK=$(SDK_DIR) \
+		SEL4CP_BOARD=$(HARDWARE_TARGET)
 
 # Run `part2`.
 .PHONY: run-part2
@@ -73,7 +76,8 @@ run-part2: build-part2 run
 build-part3:
 	$(MAKE) -C $(WORKSHOP_DIR) \
 		part3 \
-		SEL4CP_SDK=$(SDK_DIR)
+		SEL4CP_SDK=$(SDK_DIR) \
+		SEL4CP_BOARD=$(HARDWARE_TARGET)
 
 # Run `part3`.
 .PHONY: run-part3
